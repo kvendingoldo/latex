@@ -1,0 +1,730 @@
+\documentclass[a4paper,14pt,russian]{extreport}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel} 					% последний язык ведущий, стоит вторым,
+														% чтобы была правильная расстановка переносов
+\usepackage{ulem} 										% подчеркивания
+\usepackage{pscyr} 										% timesNewRoman
+\usepackage{setspace} 									% интервал
+\usepackage{amsmath} 									% для вроксиана
+\usepackage{pgfplots} 									% для графиков 
+\usepackage[14pt]{extsizes}								% включить размер шрифта 14pt
+\usepackage{geometry}									% поля страницы
+\usepackage{etoc}
+\usepackage{extsizes}									% размер шрифта в (pt)
+\usepackage{graphicx} 									% для вставки картинок
+\usepackage{titlesec} 									% оформление глав http://www.unix-lab.org/posts/title-latex/
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref} 	% для оглавления
+\usepackage{color,colortbl}								% для раскрашивания ячеек таблицы
+\usepackage{multirow}%мультитаблицы
+
+%-----------------------other---------------------------------------------
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\center}{}{-100pt}{\bfseries}{}		
+  											% исправляем названия глав и их месторасположение
+											% -100pt - отсуп
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{0em}{2.1em}}
+\renewcommand{\l@subsection}{\@dottedtocline{1}{0em}{2.1em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{1}{0em}{0em}}
+\renewcommand{\rmdefault}{ftm} 				% times New Roman
+
+\makeatother
+\graphicspath{{/home/asharov/}} 			% папка с картинками.
+\frenchspacing 								% пробелы после точки
+\linespread{1.3} 							% полуторный интервал
+%-----------------------other---------------------------------------------
+
+%-----------------------ПОЛЯ----------------------------------------------
+
+\geometry{left=3cm}			% левое поле
+\geometry{right=3cm}		% правое поле
+\geometry{top=2cm}			% верхнее поле
+\geometry{bottom=2cm}		% нижнее поле
+\headsep=5mm				% расстояние от верхнего колонтитула до текста
+
+%-----------------------ПОЛЯ-----------------------------------------------
+
+%-----------------------определяем свои команды----------------------------
+
+\newcommand{\toCenter}[1]{\begin{center}#1\par\end{center}}
+\newcommand{\toRight}[1]{\begin{flushright}#1\par\end{flushright}}
+\newcommand{\toLeft}[1]{\begin{flushleft}#1\par\end{flushleft}}
+\newcommand{\comments}[1]{\textsf{\textbf {Комментарии:  }}#1\par}
+
+%-----------------------определяем свои команды----------------------------
+
+%-----------------------определяем цветы, которые нам нужны----------------
+
+\definecolor{darkishgreen}{RGB}{39,203,22}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{lightRed}{RGB}{230,170,150}
+\definecolor{modRed}{RGB}{230,82,90}
+\definecolor{strongRed}{RGB}{230,6,6}
+
+%-----------------------определяем цветы, которые нам нужны----------------
+
+%-----------------------конец преамбулы------------------------------------
+
+\begin{document}
+\input titlepage 											% титульник в titlepage.tex
+
+\renewcommand\contentsname{\toCenter{\huge{Содержание}}} 	% название оглавления
+\renewcommand{\thechapter}{\arabic{chapter}} 				% арабские цифры в главах
+
+\renewcommand*\etoctoclineleaders
+{\hbox{\bfseries\normalsize\hbox to .75ex {\hss.\hss}}} 	%
+
+\tableofcontents											% оглавление
+\setcounter{tocdepth}{1} 									% глубина оглавление ( только главы ).
+
+\newpage
+
+\chapter*{ВВЕДЕНИЕ}
+
+\addcontentsline{toc}{chapter}{ВВЕДЕНИЕ}
+
+Зачем мне \LaTeX, если есть MS word, OpenOffice, etc? Так спросит человек , который только что узнал что же такое \LaTeX. Да, возможно человеку, которому неважно, как будет выглядеть его труды на бумаге \LaTeX не нужен, но многие хотят,чтобы их компьютерные тексты можно было просто и красиво сверстать дома, на личном ПК. Одним из людей, которому было не всё-равно как выглядят его статьи и книги был , без преувеличения, великий человек Д.Кнут. Готовя к переизданию свой многотомный труд "Исскуство программирования" издательство именила технологию печати, что сильно сказалось на качестве. Данное событие достаточно сильно опечалило Кнута и он решил научить компьютер делать книги "красивыми". Дональд планировал справиться с этой проблемой в течение летних месяцев 1977 года... Прошло примерно десять лет... Кнут сказал, что эта ошибка в планировании была его личным рекордом по недооценки сложности проекта. 
+Но результат стоил потраченных лет, на выходе Кнут получил METAFONT - система для создания шрифтов и TeX - лучшая на сегодня программа разбиения абзацев на строки. Но не будем сильно погружаться в историю, ведь пока я даже не дал ответа на то,что такое \LaTeX. А \LaTeX это, по сути своей, всего-то набор макросов над \TeX, начало которому положил Лесли Лэмпорт в начале 80-х. 
+
+\newpage
+Возможности \LaTeX:
+\begin{itemize}
+    \itemалгоритмы расстановки переносов, определения междусловных пробелов, балансировки текста в абзацах;
+    \itemавтоматическая генерация содержания, списка иллюстраций, таблиц и т. д.;
+    \itemмеханизм работы с перекрёстными ссылками на формулы, таблицы, иллюстрации, их номер или страницу;
+    \itemмеханизм цитирования библиографических источников, работы с библиографическими картотеками;
+    \itemразмещение иллюстраций (иллюстрации, таблицы и подписи к ним автоматически размещаются на странице и нумеруются);
+    \itemвозможность набирать многострочные формулы, большой выбор математических символов;
+    \itemоформление химических формул и структурных схем молекул органической и неорганической химии;
+    \itemоформление графов, схем, диаграмм, синтаксических графов;
+    \itemоформление алгоритмов, исходных текстов программ (которые могут включаться в текст непосредственно из своих файлов) с синтаксической подсветкой;
+    \itemразбивка документа на отдельные части (тематические карты).
+\end{itemize}
+
+Целью этой практики является изучение основ в издательской системе \LaTeX. 
+
+\medskip
+Для этого следует:
+\begin{enumerate}
+
+\renewcommand{\theenumi}{1}
+\item Установить пакеты программ среды \LaTeX 'a. 
+
+\renewcommand{\theenumi}{2}
+\item Изучить специальную литературу [1]-[7].
+
+\renewcommand{\theenumi}{3}
+\item Выполнить практические задания. 
+\end{enumerate}
+
+
+\newpage
+\chapter{МАТЕМАТИЧЕСКИЕ ФОРМУЛЫ В СИСТЕМЕ LaTeX}
+
+Особенности набора формул в системе \LaTeX заключается в очень приветливом для пользователя интерфейсе. Это , в первую очередь, связанно с тем, что \LaTeX  это , по своей сути, набор макросов, которые можно самостоятельно расширять. Сами же математические обозначения  в \LaTeX взяты из \TeX. Их список и команды:
+
+\textbf{Математические функции:} 
+\begin{tabbing}
+AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA \kill
+$\log$ \> \textbackslash log \> $\lg$ \> \textbackslash lg \> $\ln$ \> \textbackslash ln\\
+$\arg$ \> \textbackslash arg \> $\ker$ \> \textbackslash ker \> $\dim$ \> \textbackslash dim\\
+$\hom$ \> \textbackslash hom \> $\deg$ \> \textbackslash deg \> $\exp$ \> \textbackslash exp\\
+$\sin$ \> \textbackslash sin \> $\arcsin$ \> \textbackslash arcsin \> $\cos$ \> \textbackslash cos\\
+$\arccos$ \> \textbackslash arccos \> $\tan$ \> \textbackslash tan \> $\arctan$ \> \textbackslash arctan\\
+$\cot$ \> \textbackslash cot \> $\sec$ \> \textbackslash sec \> $\csc$ \> \textbackslash csc \\
+$\sinh$ \> \textbackslash sinh \> $\cosh$ \> \textbackslash cosh \> $\tanh$ \> \textbackslash tanh\\
+$\coth$ \> \textbackslash coth\\
+\end{tabbing}
+
+\textbf{Математические действия:}
+\begin{tabbing}
+AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA \kill
+$+$\> + \> $-$ \> - \> $*$ \> * \\
+$\pm$ \> \textbackslash pm \> $\mp$ \> \textbackslash mp \> $\times$ \> \textbackslash times\\
+$\div$ \> \textbackslash div \> $\setminus$ \> \textbackslash setminus \> $\cdot$ \> \textbackslash cdot\\
+$\circ$ \> \textbackslash circ \> $\bullet$ \> \textbackslash bullet \> $\cup$ \> \textbackslash cup\\
+$\cup$ \> \textbackslash cup \> $\uplus$ \> \textbackslash uplus \> $\sqcap$ \> \textbackslash sqcap\\
+$\sqcup$ \> \textbackslash sqcup \> $\vee$ \> \textbackslash vee \> $\wedge$ \> \textbackslash wedge\\
+$\oplus$ \> \textbackslash oplus \> $\ominus$ \> \textbackslash ominus \> $\otimes$ \> \textbackslash otimes\\
+$\odot$ \> \textbackslash odot\> $\oslash$ \> \textbackslash oslash\> $\bigtriangleup$ \> \textbackslash bigtriangleup\\
+\end{tabbing}
+
+\textbf{Бинарные отношения:}
+\begin{tabbing}
+AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA \kill
+$<$ \> < \> $>$ \> > \> $=$ \> = \\
+$:$ \> : \> $\le$ \> \textbackslash le \> $\ge$ \> \textbackslash ge \\
+$\ne$ \> \textbackslash ne \> $\sim$ \> \textbackslash sim \> $\simeq$ \> \textbackslash simeq\\
+$\approx$ \> \textbackslash approx \> $\cong$ \> \textbackslash cong \> $\equiv$ \> \textbackslash  equiv\\
+$\parallel$ \> \textbackslash parallel \> $\perp$ \> \textbackslash perp \> $\in$ \> \textbackslash in\\
+$\notin$ \> \textbackslash notin \> $\ni$ \> \textbackslash ni \> $\subset$ \> \textbackslash subset \\
+$\subseteq$ \> \textbackslash subseteq \> $\supset$ \> \textbackslash supset \> $\supseteq$ \>  \textbackslash supseteq\\
+$\succ$ \> \textbackslash succ \> $\prec$ \> \textbackslash prec \> $\succeq$ \> \textbackslash succeq \\
+$\preceq$ \> \textbackslash preceq \> $\smile$ \> \textbackslash smile \> $\frown$ \> \textbackslash frown
+\end{tabbing}
+
+\textbf{Таблица математических знаков, у которых есть верхние и нижние пределы:}
+\begin{tabbing}
+AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA \kill
+$\sum$ \> \textbackslash sum \> $\prod$ \> \textbackslash prod \> $\bigcup$ \> \textbackslash bigcup\\
+$\bigcap$ \> \textbackslash bigcap \> $\coprod$ \> \textbackslash coprod \> $\bigoplus$ \> \textbackslash bigoplus \\
+$\bigotimes$ \> \textbackslash bigotimes \> $\bigodot$ \> \textbackslash bigodot \> $\bigvee$ \> \textbackslash bigvee\\
+$\bigwedge$ \> \textbackslash bigwedge \> $\biguplus$ \> \textbackslash biguplus \> $\lim$ \> \textbackslash lim\\
+$\limsup$ \> \textbackslash limsup \> $\liminf$ \> \textbackslash liminf \> $\max$ \> \textbackslash max\\
+$\min$ \> \textbackslash min \> $\sup$ \> \textbackslash sup \> $\inf$ \>\textbackslash inf \\
+$\det$ \> \textbackslash det \> $\Pr$ \> \textbackslash Pr \> $\gcd$ \> \textbackslash gcd
+\end{tabbing}
+
+\textbf{Cтрелки различных видов:}
+\begin{tabbing}
+AAAAA\= AAAAAAAAAAAAA\= AAAAA\= AAAAAAAAAAAAA \kill
+$\to$ \> \textbackslash to \> $\longrightarrow$ \> \textbackslash  longrightarrow\\
+$\gets$ \> \textbackslash gets \> $\longleftarrow$ \> \textbackslash longleftarrow\\
+$\Rightarrow$ \> \textbackslash Rightarrow \> $\Longrightarrow$ \> \textbackslash Longrightarrow\\
+$\Leftarrow$ \> \textbackslash Leftarrow \> $\Longleftarrow$ \> \textbackslash Longleftarrow\\
+$\leftrightarrow$ \> \textbackslash leftraghtarrow \> $\longleftrightarrow$ \> \textbackslash longleftrightarrow\\
+$\Leftrightarrow$ \> \textbackslash Leftrightarrow \> $\Longleftrightarrow$ \> \textbackslash Longleftrightarrow\\
+$\uparrow$ \> \textbackslash uparrow \> $\Uparrow$ \> \textbackslash Uparrow \\
+$\downarrow$ \> \textbackslash downarrow \> $\Downarrow$ \> \textbackslash Downarrow\\
+$\updownarrow$ \> \textbackslash updownarrow \> $\Updownarrow$ \> \textbackslash Updownarrow
+\end{tabbing}
+
+\newpage
+
+Следует отметить, что при записи отображений нужно использовать не двоеточие, а команду \textbf{\textbackslash  colon:}
+
+\medskip
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+ & \\
+$f\colon\ A\to B$ & \textbf{\$f\textbackslash colon\textbackslash\ A\textbackslash to B\$}\\
+ & \\
+\hline
+\end{tabular}
+\end{center}
+\medskip
+
+Матрицы:\\
+Окружения tabular и array не слишком удобны для набора матриц, особенно если порядок большой - нужно указывать выравнивание для каждого столбца.
+
+Если подключен amsmath (\textbackslash usepackage \{amsmath\}), можно использовать окружения pmatrix, bmatrix, matrix и др. Отличаются они лишь формой скобок.
+
+Одно маленькое замечание. Если написать просто \textbackslash begin\{pmatrix\} \textbackslash end\{pmatrix\} - ничего работать не будет - latex выдаст ошибку "Missing \$ inserted". А все потому, что все окружения типа XXmatrix работают только в math mode. Поэтому нужно сделать так:
+\textbackslash begin\{equation\}
+\textbackslash begin\{pmatrix\}
+\textbackslash end\{pmatrix\}
+\textbackslash end\{equation\} 
+\newpage
+
+\toCenter{Примеры формул, набранные с помощью вышепревидённых таблиц:}
+\textbf{Символы Кристоффеля первого рода} \\ \\
+$\Gamma_{n,ij}=g_{kn}\Gamma^{k}_{ij}=\frac{1}{2}\left(\frac{\partial g_{in}}{\partial x^j}+\frac{\partial g_{jn}}{\partial x^i}-\frac{\partial g_{ij}}{\partial x^n}\right)$\\ \\
+\textbf{Символы Кристоффеля второго рода}  можно определить как коэффициенты разложения ковариантной производной координатных векторов:\\ \\
+$\partial_i=\frac{\partial }{\partial x^i}$ по базису: $\nabla_{\partial_j}\partial_i = \Gamma^{k}_{ij}\partial_k$\\ \\
+\textbf{Определитель Вронского:}
+Пусть функции $f_1(x),f_2(x)...f_n(x)$ непрерывны вместе с своими производными (до $(n-1)$ порядка включительно) на интервале $(a,b)$. Определитель Вронского (вроксиан) указанной системы функций задаётся формулой: 
+$\\ \\
+W(f_1,... f_n)(x)
+=\det\begin{pmatrix} f_1(x)  f_2(x) \cdots  f_n(x) \\
+f'_1(x)  f'_2(x)  \cdots  f'_n(x) \\
+\vdots  \vdots  \ddots  \vdots \\
+f_1^{(n-1)}(x)  f_2^{(n-1)}(x)  \cdots  f_n^{(n-1)}(x) 
+\end{pmatrix};\qquad x\in (a,b),
+$
+\\ \\
+\textbf{Формула Лиувилля — Остроградского:}\\
+формула, связывающая определитель Вронского (вронскиан) для решений дифференциального уравнения и коэффициенты в этом уравнении.
+Пусть есть дифференциальное уравнение вида \\
+$y^{(n)}+P_1(x)y^{(n-1)}+P_2(x)y^{(n-2)}+...+P_n(x)y=0,$ \\
+тогда $W(x)=W(x_0)e^{-\int_{x_0}^x P_1(\zeta)d\zeta}=Ce^{-\int P_1(x)dx},$ , где $W(x)$ - вроксиан
+
+\newpage
+\toCenter{\textbf{Таблица неопределённых интегралов}}
+\setstretch{1.5} %интервал
+{\large 
+$
+\int 0 dx = C \\ 
+\int dx = \int 1\cdot dx = x + C \\
+\int x^n \cdot dx = \frac{x^{n+1}}{n+1} + C, n\neq-1, x>0  \\
+\int \frac{dx}{x} = \ln|x| + C \\
+\int a^x dx = \frac{a^x}{\ln a} + C  \\
+\int e^x dx = e^x + C \\
+\int \sin x dx = -\cos x + C \\
+\int \cos x dx = \sin x + C \\
+\int \frac{dx}{\sin^2} = -ctgx + C \\
+\int \frac{dx}{\cos^2} = tgx + C \\
+\int \frac{dx}{\sqrt{a^2-x^2}} = arcsin \frac{x}{a} + C, |x|<|a| \\
+\int \frac{dx}{a^2+x^2} = \frac{1}{a}arctg\frac{x}{a}+C  \\
+\int \frac{dx}{a^2-x^2} = \frac{1}{2a}\ln|\frac{a+x}{a-x}|+C, |x| \neq a\\
+\int \frac{dx}{\sqrt{x^2\pm a^2}} = \ln|x+\sqrt{x^2 \pm a^2}|+C\\
+$
+}
+
+%--------------------------------------------------------------
+\chapter{СПИСКИ}
+Списки в \LaTeX бывают: нумерованными, ненумерованными и с описанием. Рассмотрим все эти списки отдельно ниже.
+
+\textbf{Ненумерованные списки.}
+Команды \textbackslash begin\{itemize\}items\textbackslash end\{itemize\}
+создают ненумерованный список: перед каждым элементом, введённым в список командой
+\textbackslash item
+без
+аргумента, печатается установленный по умолчанию маркёр. При наличии опции у команды
+\textbackslash item
+вместо него печатается
+label
+. Допускается четыре уровня вложенности маркированных списков. Вид
+маркёра по умолчанию для списков разного уровня задаётся командами
+\textbackslash labelitemi \textbackslash labelitemii\textbackslash .labelitemiii \textbackslash labelitemiv.
+\\
+\textbf{Пример:}
+\begin{itemize}
+\itemПервый элемент
+\itemВторой элемент
+\itemТретий элемент
+\end{itemize}
+
+\textbf{Нумерованные списки.}
+Команды \textbackslash begin\{enumerate\}items\textbackslash end\{enumerate\}
+создают нумерованный список: перед каждым элементом, введённым в список командой
+\textbackslash item
+без
+аргумента, печатается установленный по умолчанию маркёр.
+
+\newpage
+
+\textbf{Пример:}
+\begin{enumerate}% начало нумерованного списка
+\item Первый.% первая нумерованная запись
+\item Второй.% вторая нумерованная запись
+\end{enumerate}% конец нумерованного списка
+
+\textbf{Списки описания.}
+Данный вид списков используется для печати словарных статей(в основном). Команды \textbackslash begin\{descrption\}items\textbackslash end\{descrption\}
+создают список описания.\\
+\textbf{Пример:}
+\begin{description} % начало описания
+\item[Гай Юлий Цезарь] был государственный и политический деятель.
+  Своим завоеванием Галлии Цезарь расширил римскую державу до берегов северной Атлантики
+\end{description} % конец описания
+
+
+Выше были описаны простейшие процедуры форматирования списков. Они и многие другие подобные процедуры определены посредством процедур \textbf{list и trivlist.} Эти две процедуры позволяют легко управлять всеми параметрами списков, например шириной меток, величиной отступа в начале абзаца или шириной правого и левого полей.
+
+Процедура list имеет два аргумента \textit{def-lab} и \textit{decls}:
+
+\bigskip
+\textbf{\textbackslash \{list\}\{def-lab\}\{decls\} item-list \textbackslash end\{list\}}
+\bigskip
+
+Тело процедуры item-list состоит из записей, каждая из которых начинается с команды \textbf{\textbackslash item[mark].} Первый аргумент \textit{def-lab} определяет, как помечаются записи по умолчанию, если необязательный аргумент [mark] команды \textbf{\textbackslash item} опущен. Второй аргумент \textit{decls} устанавливает декларации, управляющие форматированием записей.  Перед выполнением декларации в decls выполняется одна из команд \textbf{\textbackslash @listi, \textbackslash @listii, \textbackslash @listiii, \textbackslash @listiv} в зависимости от того, сколько перед этим было вложений. Эти команды определяются классом печатного документа. Они устанавливают значения деклараций по умолчанию. Явное использование какой-либо декларации в decls, таким образом, переопределяет её значение. Все декларации, которые могут появляться в decls, перечислены ниже
+
+\bigskip
+
+\textbf{\textbackslash topset} --- величина вертикального пробела (дополнительно к обычному пробелу между абзацами \textbackslash parskip) который вставляется между предшествующим текстом и первой записью, а также между последней записью и последующим текстом. Значение по умолчанию устанавливается командой \textbackslash @listcmd соответствующего уровня, то есть \textbackslash @listi, \textbackslash @listii, \textbackslash @listiii или \textbackslash @listiv.
+
+\textbf{\textbackslash partopser} --- дополнительный пробел (в дополнение к \textbackslash topset + \textbackslash parskip), который вставляется между предшествующим текстом и первым пунктом списка, если перед процедурой стоит пустая строка, или между последним пунктом и последующим текстом, если имеется пустая строкапосле процедуры. Значение по умолчанию устанавливается командой \textbackslash @listcmd.
+
+\textbackslash \textbf{parser} --- величина вертикального пробела между абзацами в записи, к которому приравнивается \textbackslash parskip внутри списка. Значение по умолчанию устанавливается командой \textbackslash @listcmd.
+
+\textbf{\textbackslash itemsep}  --- величина дополнительного вертикального пробела (в дополнение к \textbackslash parser), вставляемая между последовательными записями в списке. Значение по умолчанию устанавливается командой \textbackslash @listcmd.
+
+\textbf{\textbackslash leftmargin}  --- горизонтальное расстояние между левыми границами списка и внешнего текста. Оно должно быть неотрицательным. В стандартных классах печатных документов \textbackslash leftmargin приравнивается к \textbackslash leftmargini командой \textbackslash @listi, к \textbackslash leftmarginii --- командой \textbackslash @listii и т.д.
+
+\textbf{\textbackslash rightmargin}  --- горизонтальное расстояние между праввыми границами списка и внешнего текста. Оно должно быть неотрицательным. Значение по умолчанию равно нулю, если не установлено командой \textbackslash @listcmd.
+
+\textbf{\textbackslash listparident }--- величина дополнительного отступа, добавляемая к каждой записи перед меткой. Может иметь отрицательное значение. По умолчанию равна нулю, если не установлена командой \textbackslash @listcmd.
+
+\textbf{\textbackslash labelsep }--- расстояние между боксом, содержащим метку, и текстом записи. Может иметь отрицательное значение. В печатном документе стандартного класса не изменяется командами \textbackslash @listcmd, чтобы обеспечить одно и то же значение для всех уровней вложенности.
+
+\textbf{\textbackslash labelwidth} --- ширина бокса, содержащего метку; должна быть неотрицательной. Команда \textbackslash @listcmd соответствующего уровня приравнивает её к \textbackslash leftmargincmd - \textbackslash labelsep, так что левый край бокса метки выравнивается по левой границе внешнего текста. Если ширина метки больше, чем \textbackslash labelwidth, то бокс расширяется до ширины метки.
+
+\textbf{\textbackslash makelabel{mark}} --- команда, формирующая метку, которая будет напечатана командой \textbackslash item при наличии у неё обязательного аргумента [mark]. Если команда \textbackslash makelabel не определена в \textbackslash @listcmd, то метка по умолчанию сдвигается к правому краю бокса. Команда \textbackslash makelabel может быть переопределена командой \textbackslash renewcommand.
+
+В decls в дополнение к вышеперечисленным может появитьяс следующая декларация:
+
+\textbf{\textbackslash usecounter{ctr}} --- указывает счетчик ctr, который будет использован для нумерции записей. Обычно новый счетчик определяется командой \textbackslash newcounter, при этом его значение инициализируется нулем и наращивается командой \textbackslash refstepcounter при выполнении каждой команды \textbackslash item, не имеющей обязательного аргумента. Одновременно значение счетчика назначается текущим ref-значением для организации перекрестного цитирования.
+
+
+
+
+
+
+
+
+
+
+%--------------------------------------------------------------
+
+
+
+\chapter{ТАБЛИЦЫ}
+Таблица в LaTeX в идеологическом смысле очень похожа на рисунок: есть окружение \textbackslash begin\{table \}... \textbackslash end\{table\}, которое собственно и содержит все ``опознавательные знаки'' вроде подписи и ссылки, и собственно сама таблица \textbackslash begin\{tabular\}\{|rlc|\} ... \textbackslash end\{tabular\}.
+
+Поэтому окружений для создания таблиц в LaTeX два: \textbackslash begin\{tabular\}\{|rlc|\} ... \textbackslash end\{tabular\}, которое управляет тем, как выглядит таблица, и \textbackslash begin\{table\}... \textbackslash end\{table\}, которое даёт вам возможность оформить заголовок таблицы с помощью команды \textbackslash caption\{\} и поставить на таблицу ссылку с помощью привычной команды \textbackslash label\{\}.
+
+Вообще говоря, смысл использовать стандартные таблицы \LaTeX через из описание, команды уже отпало. Сейчас есть два замечательных средства, позволяющие быстро создать таблицы для \LaTeX: Texmaker и kile. Это визуальные редаторы таблицы, которые выдают после создания нужной пользователю таблиц готовый \TeX код.
+
+%------------------------------таблица 1----------------------------
+
+\begin{table}[H]
+\begin{center}
+
+\caption{Пример использования окружения table и tabular}
+\begin{tabular}{|l|l|}
+
+\hline
+ & \\
+\textbackslash begin{table}[H] 
+ & \\
+\textbackslash begin{center} 
+ & \\
+\textbackslash begin\{tabular\}\{lc\} 
+ & \\
+
+Тип перечня \& нумерация \textbackslash \textbackslash [5pt] & \\
+
+\textbackslash ttfamily itemize \& нет \textbackslash \textbackslash & \begin{tabular}{lc}
+Тип перечня & нумерация \\[5pt]
+\ttfamily itemize & нет\\
+\ttfamily enumerate & есть\\
+\ttfamily description & нет\\
+\end{tabular} \\
+
+\textbackslash ttfamily enumerate \& есть \textbackslash \textbackslash & \\
+ & \\
+
+\textbackslash ttfamily description \& нет \textbackslash \textbackslash & \\
+ & \\
+
+\textbackslash end\{tabular\} & \\
+\textbackslash end{center}  & \\
+\textbackslash end{table} & \\
+ & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%------------------------------таблица 1----------------------------
+
+
+
+%------------------------------таблица 2----------------------------
+
+\begin{table}[H]
+\caption{\label{tab:canonsummary}Измерительные характеристики цифровой камеры Canon EOS 400D.}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Параметр & Значение \\
+\hline
+Разрешение & $3888 \times 2592$ \\
+Размер сенсора & $22.2 \times 14.8$ мм \\
+АЦП & 12~bit\\
+\hline
+\multicolumn{2}{|c|}{Результаты измерений} \\
+\hline
+Темновое смещение (BLO) & 256 \\
+Максимальный линейный сигнал & 3070~DN \\
+Значение насыщения & 3470~DN \\
+\hline
+\end{tabular}
+\end{center}
+\end{table} 
+
+%------------------------------таблица 2----------------------------
+
+
+%------------------------------таблица 3----------------------------
+\newcolumntype{g}{>{\columncolor{Gray}}c}
+\newcolumntype{d}{>{\columncolor{darkishgreen}}c}
+
+
+\begin{table}[H]
+\caption{Пример таблицы, с использованием раскраски ячеек.}
+\begin{center}
+\begin{tabular}{|c||c||g||d|d|d|}
+    \hline
+ Signal & \cellcolor{Gray} Device    & \multicolumn{4}{|c|}{Computation time, s}\\
+\cline{3-6}
+Strength    & \cellcolor{Gray}  size     &Dantzig-   &Branch and & Active    &Projected\\ 
+        &       &Wolfe      &Bound      &Set        &Gradients\\ 
+\rowcolor{lightRed}
+\hline
+Weak        & 7x7   &400        &230        &200        &58\\ \cline{3-6}
+\rowcolor{lightRed}
+(0\% constr.)    & 10x10 &1000       &840        &500        &135 \\ \cline{3-6}
+
+\hline
+\rowcolor{modRed}
+Moderate    & 7x7   &640        &380        &270        &54\\ \cline{3-6}
+\rowcolor{modRed}
+(5\% constr.)    & 10x10 &3120       &1200       &700        &110 \\ \cline{3-6}
+
+\hline
+\rowcolor{strongRed}
+Strong      & 7x7   &1400       &290        &350        &55\\  \cline{3-6}
+\rowcolor{strongRed}
+(20\% constr.)   & 10x10 &15320      &810        &960        &120 \\  \cline{3-6}
+\hline \hline
+    \end{tabular}
+    \end{center}
+\end{table} 
+%------------------------------таблица 3----------------------------
+
+
+
+%------------------------------таблица 4----------------------------
+
+\begin{table}[H]
+\caption{Пример не стандартной таблицы.}
+\begin{center}
+\begin{tabular}{cc|c|c|c|c|l}
+\cline{3-6}
+& & \multicolumn{4}{ c| }{Primes} \\ \cline{3-6}
+& & 2 & 3 & 5 & 7 \\ \cline{1-6}
+\multicolumn{1}{ |c  }{\multirow{2}{*}{Powers} } &
+\multicolumn{1}{ |c| }{504} & 3 & 2 & 0 & 1 &     \\ \cline{2-6}
+\multicolumn{1}{ |c  }{}                        &
+\multicolumn{1}{ |c| }{540} & 2 & 3 & 1 & 0 &     \\ \cline{1-6}
+\multicolumn{1}{ |c  }{\multirow{2}{*}{Powers} } &
+\multicolumn{1}{ |c| }{gcd} & 2 & 2 & 0 & 0 & min \\ \cline{2-6}
+\multicolumn{1}{ |c  }{}                        &
+\multicolumn{1}{ |c| }{lcm} & 3 & 3 & 1 & 1 & max \\ \cline{1-6}
+\end{tabular}
+\end{center}
+\end{table} 
+
+%------------------------------таблица 4----------------------------
+
+\chapter{РИСУНКИ}
+
+\parОдин из пакетов для работы с рисунками в \LaTeX - graphicx, который обеспечивает их вставку в текст документа. Пакет работает только с форматом EPS, так что перед вставкой, изображение нужно конвертировать в EPS. \\
+\textbf{Как вставить в LaTeX-документ изображение?}\\
+\par Рисунок в технической статье или отчёте - это не просто картинка, а ещё и подпись к нему, и возможность поставить на рисунок ссылку. Для этого сначала в преамбуле документа нужно вставить следующее:\textbackslash usepackage[dvips]\{graphicx\} и \textbackslash graphicspath\{\{noiseimages/\}\}. \\
+Логично хранить рисунки в различных каталогах. Все каталоги перечисляются с помощью команды: \textbackslash graphicspath\{\{каталог1\}....\{каталог N\}\}
+В \LaTeX мы только упоминаем рисунок - ставим на него относительную ссылку при помощи команды \textbackslash includegraphics[width=1 \textbackslash linewidth] \{image \} 
+
+\par Помимо вставки картинки, нам нужна к нему подпись и возможность сослаться. В общем, мы можем:
+\begin{enumerate}
+
+\renewcommand{\theenumi}{1}
+\item определить место рисунка в тексте - \textbackslash begin\{figure\}[X] с помощью параметров h,h!,H,pH на месте X.
+
+\renewcommand{\theenumi}{2}
+\item задать размер изображения в относительных единицах - долях от ширины строки или текста
+
+\renewcommand{\theenumi}{3}
+\item  вставить подпись под рисунком \textbackslash caption\{Зависимость сигнала от шума для данных.\}
+
+\renewcommand{\theenumi}{4}
+\item вставить ссылку на рисунок \textbackslash label\{ris:image\}
+\end{enumerate}
+
+Пример вставки eps картинки с помощью includegraphics: 
+\begin{figure}[h]
+\includegraphics[width=1\linewidth]{forTex}
+\caption{GNU LOGO.}
+\label{ris:image}
+\end{figure}
+\newpage
+
+
+\toCenter{Импортирование графических объектов}
+
+
+
+В пакете \textbf{graphic} определена команда \textbf{\textbackslash includegraphics[keyval-list]{file}} для вставки в документ рисунка из графического файла file. Необязательный аргумент keyval-list может содержать целый список ключей. Значения ключей задаются в виде key=value, а в списке они перечисляются через запятую. Команда \textbf{\textbackslash includegraphic} не заканчивает абзац, поэтому позволяет вставлять небольшие рисунки прямо внутрь текста.
+
+Опцию команды \textbackslash \textbf{includegraphic} можно опустить, если мы хотим вставить в документ рисунок в "натуральную величину" из esp-файла в случае драйвера dvips или из pdf-файла в случае драйвера pdftex. \LaTeX\ выделяет в документе под рисунок бокс, размер которого считывается из BoudingBox и MediaBox соответственно.
+
+Пример:\\
+\includegraphics[width=1\linewidth]{/home/asharov/031023}
+\newpage
+В \LaTeX 'е это выглядит так:
+
+\begin{center}
+\begin{tabular}{|l|}
+\hline
+ \\
+\textbf{\textbackslash includegraphic[width=1 \textbackslash linewidth]\{\textbackslash home\textbackslash asharov \textbackslash image\}}\\
+ \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+\textbf{Как задать размер рисунка в документе }\\
+Поговорим о ключах:
+
+\textit{wigth=length} устанавливает значение length в качестве ширины области , выделяемой для размещения рисунка.
+
+\textit{heigth=length} --- высоту
+
+\textit{scale=scale} изменяет натуральный размер рисунка в scale раз.
+
+\textit{clip=boolean} отсекает часть рисунка, выходящую за границы видимой области, если значение boolean равно true.
+
+\textit{angle=pos} поворачивает рисунок на angle градусов против часовой стрелки. По умолчанию ось вращения проходит через точку отсчета бокса.
+
+\textit{origin=pos} позволяет указать одно из 12 положений оси вращения. 
+
+
+\textbf{Смена цветов шрифта}
+
+
+
+Синтаксис команд переключения цвета похож на команды переключения шрифтов:
+
+\textbf{\textbackslash color [model]\{clr\}}
+
+\textbf{\textbackslash textcolor[model]\{clr\}}
+
+Область действия декларации \textbf{color} ограничивается ближайшей парой круглых скобок, внутри которой стоит \textbackslash \textbf{color}.
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+ & \\
+\{\textbackslash color\{blue\} cout\} << & \\
+\{\textbackslash color\{red\} "Hello world!"\} << & {\color{blue} cout}<<{\color{red}''Hello world!''}<<{\color{blue} endl}; \\
+\{\textbackslash color\{blue\} endl\}; & \\
+ & \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Выравнивание и обтекание текстом}
+
+
+
+Стандартные классы печатных документов не содержат средств размещения небольших рисунков и таблиц так, чтобы они обтекались окружающим их текстом. Однако существует несколько пакетов чтобы это сделать.
+
+Приведем только один из них:
+
+\bigskip
+\textbf{\textbackslash \{floatingfigure\}[hpos]\{width\}\ldots\textbackslash end \{floatingfigure\}}
+
+\textbf{\textbackslash \{floatingfigure\}[hpos]\{width\}\ldots\textbackslash end \{floatingfigure\}}
+\bigskip
+
+Для размещения небольших рисунков и таблиц заданной ширины width.
+
+А вот и все возможные значения параметра hpos:
+
+\textbf{l} --- разместить плавающий объект слева от абзаца
+
+\textbf{r} --- разместить плавающий объект справа от абзаца
+
+\textbf{p} --- разместить плавающий объект на внешнем крае страницы (справа для нечетной страницы, слева для четной страницы).
+
+Если необязательный аргумент пропущен, способ позиционирования объекта определяется значением необязательного аргумента defaultpos с которым загружен пакет floating:
+
+\textbf{rflt} --- разместить плавающие объекты справа
+
+\textbf{lflt} --- разместить плавающие объекты слева
+
+По умолчанию плавающий объект размещается по внешнему краю страницы.
+
+\newpage
+Помимо картинов в системе \LaTeX можно рисовать даже полноценные графики, да и не только их. Для этого существует множество пакетов, которые находятся в свободном распространении. Один из таких пакетов - tikzpicture. Он достаточно сильно распространён и с его помощью можно достаточно просто строить 3D и 2D графики. Помимо этого есть открытая библиотека примеров, где можно вполне быстро найти подходящий график и изменить его под свою задачу.
+
+\toCenter{Примеры рисунков сделанных с помощью пакета tikzpicture:}
+
+
+ \begin{tikzpicture}
+\begin{axis}[ 
+    view={110}{10}, 
+    colormap/greenyellow,
+    colorbar 
+]
+\addplot3[surf] {-sin(x^2 + y^2)};
+\end{axis}
+\end{tikzpicture}
+
+
+\pgfplotsset{width=7cm, compat=1.10}
+\usepgfplotslibrary{fillbetween}
+\pgfmathdeclarefunction{poly}{0}{\pgfmathparse{-x^3+5*(x^2)-3*x-3}}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    axis y line = center,
+    axis x line = center,
+    xtick       = {0.0,2,3},
+    xticklabels = {$a$,$b$,$c$},
+    ytick       = {1},
+    yticklabels = {1},
+    samples     = 190,
+    domain      = -1.2:4.2,
+    xmin = -1, xmax = 5,
+    ymin = -5, ymax = 7,
+  ]
+  \addplot[name path=poly, black, thick, mark=none, ] {poly};
+  \addplot[name path=line, gray, no markers, line width=1pt] {0};
+  \addplot fill between[ 
+    of = poly and line, 
+    split, % calculate segments
+    every even segment/.style = {green!70},
+    every odd segment/.style  = {purple!60}
+  ];
+\end{axis}
+\end{tikzpicture}
+
+
+
+
+
+\chapter*{ЗАКЛЮЧЕНИЕ}
+\addcontentsline{toc}{chapter}{ЗАКЛЮЧЕНИЕ}
+	\par Во время прохождения практики я закрепил свои знания о системе \LaTeX. Так же я научился кое-чему новому, что до этого не делал в данной системе. 
+	\parСистема \LaTeX , конечно же, даёт массу преимуществ по сравнению с остальными системами, однако она очень сильно затрудняет процесс написания текста. Главная трудность в написании текста в этой системе - большая вероятность заплутать в своём документе без правильно сделанной преамбулы. Но в целом, если сделать всё правильно, то проблем возникнуть не должно. 
+	\parМоя работа с системой \LaTeX не заканчивается на этой практике. Уверен, что курсовую работу, научные тексты и диплом я буду писать в системе \TeX, c , возможно, расширениями , которые даёт \LaTeX.
+
+
+
+\def\bibname{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ} % Меняем заголовок литературы
+\begin{center}
+
+\renewcommand{\refname}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\begin{thebibliography}{99}
+
+\bibitem{book}
+Партль Х., Шлейгл Э., Хинга Э. \LaTeXe\ Краткое руководство.
+
+URL: \url{http://zns.susu.ru/IT/latex/literature/PartlS_LaTeX.pdf}. 
+
+(дата обращения 20.08.2015)
+
+\bibitem{book}
+Сюткин В. Справочник по омандам \LaTeXe.
+
+URL: \url{http://sbras.ru/win/docs/TeX/LaTex2e/Text_in_LaTeX.pdf}. 
+
+(дата обращения 20.08.2015)
+
+\bibitem{book}
+Гуссенс М., Миттельбах Ф., Самарин А. Путеводитель по \LaTeX\ и его расширению \LaTeXe.
+
+URL: \url{http://rutracker.org/forum/viewtopic.php?t=1526165}. 
+
+(дата обращения 21.08.2015)
+
+\bibitem{book}
+Дональд Кнут. Все про TeX. — М.: «Вильямс», 2003. — С. 560. — ISBN 5-8459-0382-3.
+URL: \url{http://aralibrus.ru/vsyo-pro-tex-knut-donald/}
+\\ (дата обращения 21.08.2015)
+
+\end{thebibliography}
+\end{center}
+\addcontentsline{toc}{chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+
+
+
+
+\end{document}
