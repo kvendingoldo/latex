@@ -324,12 +324,15 @@
 \shapka
 
 \vspace{0.5cm}
-\begin{flushright}
+\begin{flushleft}
 \parbox{8cm}{
 \raggedright
 \CYRK\cyra\cyrf\cyre\cyrd\cyrr\cyra\ \@chair
 }
-\end{flushright}
+
+% chair
+
+\end{flushleft}
 
 \vspace{1cm}
 {\centering

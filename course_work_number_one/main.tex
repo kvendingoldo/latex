@@ -3,25 +3,24 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
 \usepackage[russian]{babel}
-
 \usepackage{amsmath}
-\usepackage{dsfont} % it needs for Math-special words as A
-\usepackage{color} % I use it for color links
+\usepackage{dsfont} %it needs for Math-special words as A
+\usepackage{color} %I use it for color links
 \usepackage{hyperref}
+\usepackage{geometry}
 
+\geometry{verbose,a4paper,tmargin=2cm,bmargin=2cm,lmargin=2.5cm,rmargin=1.5cm}
 
 \hypersetup{
     colorlinks=true, %set true if you want colored links
-    linktoc=all,     %set to all if you want both sections and subsections linked
+    linktoc=all,     %set to all if you want both sect. and subsect. linked
     linkcolor=blue,  %choose some color if you want links to stand out
 }
-
 
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \newcommand{\udsum}[3]{\sum\limits_{#1}^{#2}{#3}}
 \newcommand{\dsum}[2]{\sum\limits_{#1}{#2}}
 \newcommand{\tl}{\newline\tab}
-
 
 %\renewcommand{\thesection}{\arabic{section}}
 %\renewcommand{\thesubsection}{\arabic{section}}
@@ -30,7 +29,7 @@
 
 \begin{document}
 
-\chair{теории вероятностей, математической статистики и управления стохастическими процессами}
+\chair{теории функций и приближений}
 \worktitle{Квадратичные формы и их приложения}
 \course{2}
 \department{механико-математического факультета}
@@ -65,9 +64,9 @@
 
 \section{Основные понятия и определения}
 
-\textbf{Базис} - набор $n$ векторов в $n-$мерном линейном пространстве, таких, что любой вектор пространства может быть представлен в виде некоторой их линейной комбинации, при этом ни один из базисных векторов не представим в виде линейной комбинации остальных. 
+\textbf{Базис} - набор $n$ векторов в $n-$мерном линейном пространстве, таких, что любой вектор пространства может быть представлен в виде некоторой их линейной комбинации, при этом ни один из базисных векторов не представим в виде линейной комбинации остальных. \cite{8}
 
-\textbf{Матрицей} называется прямоугольная таблица из чисел, содержащая некоторое количество $m$ строк и некоторое количество $n$ столбцов. Числа $m$ и $n$ называются порядками матрицы. В случае, если $m = n$, матрица называется квадратной, а число $m= n$ – ее порядком.
+\textbf{Матрицей} называется прямоугольная таблица из чисел, содержащая некоторое количество $m$ строк и некоторое количество $n$ столбцов. Числа $m$ и $n$ называются порядками матрицы. В случае, если $m = n$, матрица называется квадратной, а число $m= n$ – ее порядком. \cite{9}
 
 \textbf{Определитель квадратной матрицы A} $$|A|=\det A=\begin{vmatrix}
 a_{11} & a_{12} & \cdots & a_{1n} \\ 
@@ -77,22 +76,21 @@ a_{n1} & a_{n2} & \cdots & a_{nn} \\
 \end{vmatrix}
 $$
 
-\textbf{Минор} $A \begin{bmatrix} \alpha_1 & \alpha_2 \dots \alpha_k \\ \beta_1 & \beta_2 \dots \beta_k \end{bmatrix}$ матрицы $A$ - определитель такой квадратной матрицы $B$ порядка $k$ (который называется также порядком этого минора), элементы которой стоят в матрице $A$ на пересечении строк с номерами $\alpha_1, \alpha_2 \dots \alpha_k$ и столбцов с номерами $\beta_1, \beta_2 \dots \beta_k$.\newline
-Если номера отмеченных строк совпадают с номерами отмеченных столбцов, то минор называется \textbf{главным}, а если отмечены первые $k$ строк и первые $k$ столбцов - \textbf{угловым} или \textbf{ведущим главным}.
+\textbf{Минор} $A \begin{bmatrix} \alpha_1 & \alpha_2 \dots \alpha_k \\ \beta_1 & \beta_2 \dots \beta_k \end{bmatrix}$ матрицы $A$ - определитель такой квадратной матрицы $B$ порядка $k$ (который называется также порядком этого минора), элементы которой стоят в матрице $A$ на пересечении строк с номерами $\alpha_1, \alpha_2 \dots \alpha_k$ и столбцов с номерами $\beta_1, \beta_2 \dots \beta_k$. Если номера отмеченных строк совпадают с номерами отмеченных столбцов, то минор называется \textbf{главным}, а если отмечены первые $k$ строк и первые $k$ столбцов - \textbf{угловым} или \textbf{ведущим главным}. \cite{10}
 
-Несколько строк (столбцов) называются линейно независимыми, если ни одна из них не выражается линейно через другие. 
+Несколько строк (столбцов) называются линейно независимыми, если ни одна из них не выражается линейно через другие. \cite{11}
 
-\textbf{Рангом матрицы} $A$ с $m$ строк и $n$ столбцов называется максимальное число линейно независимых строк (столбцов). Ранг $rangM$ матрицы $M$ размера $m \times n$ называют полным, если $rangM = min(m,n)$.
+\textbf{Рангом матрицы} $A$ с $m$ строк и $n$ столбцов называется максимальное число линейно независимых строк (столбцов). Ранг $rangM$ матрицы $M$ размера $m \times n$ называют полным, если $rangM = min(m,n)$. \cite{11}
 
 \textbf{Билинейной формой} называется функция $F:L \times L \to K$, линейная по каждому из аргументов, где $L$ есть векторное пространство над полем $K$: \\
 \tab $F(x+z,y)=F(x,y)+F(z,y)$ \\
 \tab $F(x,y+z)=F(x,y)+F(x,z)$ \\
-\tab $F(\lambda x,y)= F(x,\lambda y) = \lambda F(x,y)$, здесь $x,y,\in L$ и $\lambda \in K$
+\tab $F(\lambda x,y)= F(x,\lambda y) = \lambda F(x,y)$, здесь $x,y,\in L$ и $\lambda \in K$ \cite{12}
 
 
 \section{Квадратичная форма и ее свойства}
 
-\tab \textbf{Квадратичной формой над множеством $\mathds{a}$} называют однородный полином второй степени с коэффициентами из $\mathds{a}$;
+\tab \textbf{Квадратичной формой над множеством $\mathds{a}$} называют однородный полином второй степени с коэффициентами из $\mathds{a}$; \cite{13}
 \tl
 (Полином (многочлен) $F(x_1,x_2,...,x_l)$ называется \textbf{однородным} полиномом или формой степени (или порядка) $m$, если все его одночлены имеют степень $m$. Однородный полином первого, второго или третьего порядков называют также, соответственно, линейной, квадратичной или кубической формой.)
 \tl
@@ -384,7 +382,7 @@ $$\frac{d^2z(y_0)}{dy^Tdy}= S^T\frac{d^2f(x_0)}{dx^Tdx}\,S= \begin{pmatrix}
 10&25
 \end{pmatrix}\!.$$
 
-Следовательно, искомый дифференциал имеет вид
+Следовательно, искомый дифференциал имеет ви
 $$d^2z=
 \begin{pmatrix}
 dy_1&dy_2
@@ -394,6 +392,9 @@ dy_1&dy_2
 10&25 
 \end{pmatrix}\!\cdot\! 
 \begin{pmatrix}dy_1\\dy_2\end{pmatrix}= 4dy_1^2+20dy_1dy_2+25dy_2^2.$$
+
+\conclusion
+НАПИСАТЬ ЗАКЛЮЧЕНИ
 
 \begin{thebibliography}{00} % Список литературы
 \bibitem{1}
@@ -414,7 +415,18 @@ URL: \href{http://mathhelpplanet.com/static.php?p=linyeinye-i-kvadratichnye-form
 \bibitem{7}
 Квадратичные формы [Электронный ресурс]:\\
 URL: \href{https://en.wikipedia.org/wiki/Quadratic\underline{ }form}{https://en.wikipedia.org/wiki/Quadratic\underline{ }form} \\ (дата обращения 01.05.2016).
-
+\bibitem{8}
+http://mathmetod.wikispaces.com/Базис
+\bibitem{9}
+http://100formul.ru/matrix1
+\bibitem{10}
+https://goo.gl/d9FnPw
+\bibitem{11}
+https://goo.gl/EzDACj
+\bibitem{12}
+https://goo.gl/pASYNq
+\bibitem{13}
+http://pmpu.ru/vf4/2form
 \end{thebibliography}
 
 \end{document}
