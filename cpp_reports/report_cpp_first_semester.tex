@@ -1,0 +1,1345 @@
+\documentclass[11pt]{article}
+\usepackage[russian,english]{babel}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{tgbonum}
+\title{}
+\author{Александр Шаров}
+\date{}
+\geometry{textwidth=20cm} % ширина листа
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=c++,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname               % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C++,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\begin{document}
+  \begin{center}
+    \large
+
+    \vspace{0.5cm}
+НИУ «Саратовский государственный университет имени Н.Г. Чернышевского»
+
+    \vspace{0.25cm}
+    
+    механико-математический факультет
+
+    \vfill
+    {\LARGE Отчет по практике за 1-й семестр.\\Выполнил студент 1 курса \\Александр Шаров}
+
+    \vfill
+
+
+
+  \bigskip
+    
+    Саратов 2014
+\end{center}
+
+
+\newpage
+\begin{center}
+\usefont{T2A}{cmr}{m}{n} {\fontsize{20}{10}\selectfont {Основы программирования на языке с++ ЧАСТЬ 1}}
+\end{center}
+\begin{flushleft}
+\begin{center}
+ \section{Страница 21, задание I, задача 20}
+\colorbox{yellow}{Написать программу , которая вычисляет значение выражения $ln|(y-\sqrt{|x|})(x-\frac{y}{(x+\frac{y^2}{4})})|$}
+\end{center} 
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+	{
+		double x,y;
+		cout<<"enter x,y please: "; cin>>x>>y;
+		if (4*x+y*y!=0)	cout<<"results= "<<log(abs(y-sqrt(abs(x)))*(x-y/((x+y*y/4))))<<endl;
+			else cout<<"function is not defined"<<endl;
+		return 0;
+	}
+\end{lstlisting}
+
+\begin{table}[h]\begin{center}\begin{tabular}{|l|l|l}
+\cline{1-2}
+\multicolumn{2}{|c|}{тесты} &  \\ \cline{1-2}
+     входные данные      &       выходные данные    &  \\ \cline{1-2}
+         2 3  &      results= 0.71891
+    &  \\ \cline{1-2}
+            1000 1000  &      results= 13.7834
+
+    &  \\ \cline{1-2}
+            123 321  &      results= 10.5484
+
+    &  \\ \cline{1-2}
+\end{tabular}\end{center}\end{table}
+
+\textbf{Комментарии к программе:} \\
+1.\usefont{T2A}{cmr}{lmtt}{m} Ищем одз для функции:  $ln|(y-\sqrt{|x|})(x-\frac{y}{(x+\frac{y^2}{4})})|$
+\newline ОДЗ: ${(x,y) \in R^2: 4x+y^2\ne 0}$\\
+2. Директива \textbf{include} дает указание компилятору читать еще один исходный файл — в дополнение к тому файлу, в котором находится сама эта директива. Имя исходного файла должно быть заключено в двойные кавычки или в угловые скобки. \\
+3. Директива \textbf{using} позволяет использовать имена из пространства-имен без явного указания квалификатора имя-пространства-имен.\\
+4. \textbf{iostream} — заголовочный файл с классами, функциями и переменными для организации ввода-вывода в языке программирования C++. \\
+5. \textbf{cmath} -заголовочный файл для работы с математикой, аналогичен заколовочному файлу из языка С: \textbf{math.h} \\
+6. \textbf{endl} - манипулятор вывода. Переводит курсор на новую строку \\
+7. \textbf{cin} – объект класса \textbf{ipstream}, соответствующий стандартному вводу. \\
+8. \textbf{cout} – объект класса \textbf{iostream}, соответствующий стандартному выводу. \\
+
+\newpage
+\begin{center}
+\section{Страница 21, задание II, задача 20}
+\colorbox{yellow}{Написать программу, которая подсчитывает : сумму членов геометрической прогрессии, если известен её}\\\colorbox{yellow}{ первый член, знаменатель и число членов прогрессии }
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+	{
+		double b1,q,n; cout<<"enter please b1,q,n: "; cin>>b1>>q>>n;
+		cout<<	b1*(pow(q,n)-1)/(q-1);
+		return 0;
+	}
+\end{lstlisting}
+
+\begin{table}[h]\begin{center}\begin{tabular}{|l|l|l}
+\cline{1-2}
+\multicolumn{2}{|c|}{тесты} &  \\ \cline{1-2}
+     входные данные      &       выходные данные    &  \\ \cline{1-2}
+         1 2 3 &       7    &  \\ \cline{1-2}
+         3 3 3 &       39    &  \\ \cline{1-2}
+         15 21 2 &     330    &  \\ \cline{1-2}
+\end{tabular}\end{center}\end{table}
+
+\textbf{Комментарии к программе:} \\
+1. Функция \textbf{pow} является включенной в директиву \textbf{<cmath>} и возводит число в степень.
+
+\newpage
+\begin{center}
+\section{Страница 22, задание III, задача 20}
+\colorbox{yellow}{Написать программу, которая определяет является ли треугольник с длинами сторон $a,b,c$ равносторонним}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+int main()
+	{
+		using namespace std;
+		int a,b,c;
+		cout<<"read a, b ,c please: "; cin>>a>>b>>c;
+		cout<<(((a==b)&&(b==c))?("triangle is equilateral"):("triangle isn't equilateral"))<<endl;
+		return 0;
+	}
+\end{lstlisting}
+
+\begin{table}[h]\begin{center}\begin{tabular}{|l|l|l}
+\cline{1-2}
+\multicolumn{2}{|c|}{тесты} &  \\ \cline{1-2}
+     входные данные      &       выходные данные    &  \\ \cline{1-2}
+         1 2 3  &       triangle isn't equilateral
+    &  \\ \cline{1-2}
+    3 3 3  &       triangle is equilateral
+    &  \\ \cline{1-2}
+\end{tabular}\end{center}\end{table}
+
+\textbf{Комментарии к программе:} \\
+1. Условная операция \textbf{«? :»} называется тернарной операцией (то есть трёхместная (имеет три операнда), единственная в C++). Форма записи тернарной операции в C++ \textbf{"условие" ? "выражение 1" : "выражение 2";}
+
+\newpage
+\begin{center}
+\section{Страница 32, упражнение 2.7, №20}
+\colorbox{yellow}{Разработать фукнцию $f(x_1,y_1,x_2,y_2)$, которая вычисляет длину отрезка по координатам вершин ($x_1,y_1$) и ($x_2,y_2$),}\\
+\colorbox{yellow}{ и функцию $t(a,b,c)$, которая проверяет,существует ли треугольник с длинами сторон a,b,c. С помощью данных}\\
+\colorbox{yellow}{ функций проверить, сколько различных треугольников можно построить по четырем заданным точками на}\\
+\colorbox{yellow}{ плоскости}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+using namespace std;
+const double eps=1e-5;
+float segment(double x1, double y1, double x2, double y2)
+	{
+		return sqrt(pow(y2-y1,2)+pow(x2-x1,2));
+	}
+bool triangle(double a,double b,double c)
+	{
+		if ((a<=b+c-eps)&&(b<=a+c-eps)&&(c<=a+b-eps)) return true;
+			else return false;
+	}
+int main()
+	{
+		int sum=0;
+		double x1,x2,x3,x4,y1,y2,y3,y4;
+		cin>>x1>>y1>>x2>>y2>>x3>>y3>>x4>>y4;
+
+		if (triangle(segment(x1,y1,x2,y2),segment(x2,y2,x3,y3),segment(x3,y3,x1,y1))) sum++;
+			cout<<segment(x1,y1,x2,y2)<<" "<<segment(x2,y2,x3,y3)<<" "<<segment(x3,y3,x1,y1)<<endl;
+		// 1 2 3
+		if (triangle(segment(x1,y1,x3,y3),segment(x3,y3,x4,y4),segment(x4,y4,x1,y1))) sum++;
+			cout<<segment(x1,y1,x3,y3)<<" "<<segment(x3,y3,x4,y4)<<" "<<segment(x4,y4,x1,y1)<<endl;
+		// 1 3 4
+		if (triangle(segment(x1,y1,x2,y2),segment(x2,y2,x4,y4),segment(x4,y4,x1,y1))) sum++;
+			cout<<segment(x1,y1,x2,y2)<<" "<<segment(x2,y2,x4,y4)<<" "<<segment(x4,y4,x1,y1)<<endl;
+		// 1 2 4
+		if (triangle(segment(x4,y4,x2,y2),segment(x2,y2,x3,y3),segment(x3,y3,x4,y4))) sum++;
+			cout<<segment(x4,y4,x2,y2)<<" "<<segment(x2,y2,x3,y3)<<" "<<segment(x3,y3,x4,y4)<<endl;
+		// 2 3 4
+		cout<<sum;
+		return 0;
+	}
+\end{lstlisting}
+
+\textbf{Комментарии к программе:} \\
+1. Выражения типа \textbf{const <type> variable} - константа.\\
+2. Операция \textbf{sqrt} включена в директиву \textbf{<cmath>}. Вычисляюет квадратный корень.\\
+3. Тип \textbf{bool} - логический тип, множество значений которого - \{0,1\}\\
+
+\newpage
+\begin{center}
+\section{Страница 45, упражнение 3.7, №20}
+\colorbox{yellow}{Дана точка на плоскости с координатами (x,y). Составить программу,которая выдаёт "Да","Нет","На границе"}\\\colorbox{yellow}{ в зависимости от того, лежит ли точка внутри заштрихованной области, вне заштрихованной области или на её}\\\colorbox{yellow}{ границе.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+int main()
+	{
+		using namespace std;
+		double x,y;
+		cin>>x>>y;
+		if ((y<23)&&(y>0)&&(x<=y)&&(x<0)) cout<<"point is in the region";
+		    else if ((( y==23||y==0)&&(x<=y)&&(x<0))||((x==y||x==0)&& y<23 &&y>0 )) cout<<"point is at the interface";
+		        else cout<<"point isn't in the region";
+		return 0;
+	}
+\end{lstlisting}
+
+\begin{table}[h]\begin{center}\begin{tabular}{|l|l|l}
+\cline{1-2}
+\multicolumn{2}{|c|}{тесты} &  \\ \cline{1-2}
+     входные данные      &       выходные данные    &  \\ \cline{1-2}
+         1 2  &       point isn't in the region    &  \\ \cline{1-2}
+                  1 1  &       point is at the interface    &  \\ \cline{1-2}
+\end{tabular}\end{center}\end{table}
+
+\newpage
+\begin{center}
+\section{Страница 46, упражнение II , №15}
+\colorbox{yellow}{Дан признак геометрической фигуры на плоскости. Вывести на экран периметр и площадь заданной фигуры}\\\colorbox{yellow}{(данные для расчетов запросить у пользователя}
+ \end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+int main()
+	{
+		using namespace std;
+		const double pi=3.14159;
+		char temp; cout<<"enter char please(circle(C),rectangle(R),triangle(T)): "; cin>>temp;
+		switch (temp) 
+			{
+			    case 'C':
+			        double r; cout<<"enter radius: "; cin>>r; cout<<"Area of the figure= "<<pi*r*r;break;
+			    case 'R':
+			        double a,b; cout<<"enter a & b:"; cin>>a>>b; cout<<"Area of the figure= "<<a*b;break;
+			    case 'T':
+			        double base,h; cout<<"enter height: ";cin>>h;cout<<"enter base : ";cin>>base; cout<<"Area of the figure= "<<h*0.5*base;break;
+			    default:cout<<"invalid character"<<endl;break;
+			}
+		return 0;
+	}
+\end{lstlisting}
+
+\begin{table}[h]\begin{center}\begin{tabular}{|l|l|l}
+\cline{1-2}
+\multicolumn{2}{|c|}{тесты} &  \\ \cline{1-2}
+     входные данные      &       выходные данные    &  \\ \cline{1-2}
+C 2  &Area of the figure= 12.5664&  \\ \cline{1-2}
+R 1 2  &Area of the figure= 2&  \\ \cline{1-2}
+T 1 2  &Area of the figure= 1&  \\ \cline{1-2}
+\end{tabular}\end{center}\end{table}
+
+\textbf{Комментарии к программе:} \\
+1. Конструкция \textbf{switch-case} — это удобная замена длинной \textbf{if-else} конструкции, которая сравнивает переменную с несколькими константными значениями.\\
+
+
+\newpage
+\begin{center}
+\section{Страница 47, упражнение III , №20 (for)}
+\colorbox{yellow}{Вывести на экзан все трехзначные числа, в которых хотя бы две цифры повторяются.}
+ \end{center}
+\begin{lstlisting}
+#include <iostream>
+int main()
+	{
+		using namespace std;
+		int t1,t2,t3;
+		for(int i=100;i<1000;i++)
+			{
+				t1=i/100;
+				t2=i/10; t2=t2%10;
+				t3=i%100;t3=t3%10;
+				if ((t1==t2)or(t2==t3)or(t3==t1)) cout<<i<<" "<<endl;
+			}
+		return 0;
+	}
+\end{lstlisting}
+
+\begin{center}Входных данных нет.\\ Выходные данные:\\
+100 101 110 111 112 113 114 115 116 117 118 119 121 122 131 133 141 144 151 155 161 166 171 177 181 188 191 199 200 202 211 212 220 221 222 223 224 225 226 227 228 229 232 233 242 244 252 255 262 266 272 277 282 288 292 299 300 303 311 313 322 323 330 331 332 333 334 335 336 337 338 339 343 344 353 355 363 366 373 377 383 388 393 399 400 404 411 414 422 424 433 434 440 441 442 443 444 445 446 447 448 449 454 455 464 466 474 477 484 488 494 499 500 505 511 515 522 525 533 535 544 545 550 551 552 553 554 555 556 557 558 559 565 566 575 577 585 588 595 599 600 606 611 616 622 626 633 636 644 646 655 656 660 661 662 663 664 665 666 667 668 669 676 677 686 688 696 699 700 707 711 717 722 727 733 737 744 747 755 757 766 767 770 771 772 773 774 775 776 777 778 779 787 788 797 799 800 808 811 818 822 828 833 838 844 848 855 858 866 868 877 878 880 881 882 883 884 885 886 887 888 889 898 899 900 909 911 919 922 929 933 939 944 949 955 959 966 969 977 979 988 989 990 991 992 993 994 995 996 997 998 999 \end{center}
+
+\textbf{Комментарии к программе:} \\
+1. $/$ - операция целочисленного деления.
+\newpage
+\begin{center}
+\section{Страница 47, упражнение III , №20 (while)}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+int main()
+	{
+		using namespace std;
+		int s,b,a,t1,t2,t3;
+		cout<<"enter border please: "; cin>>a>>b;
+		int i=a;
+			while (i<=b)
+				{
+					t1=i/100;
+					t2=i/10; t2=t2%10;
+					t3=i%100;t3=t3%10;
+					if (((t1==t2)||(t2==t3)||(t3==t1))&&((i<-99)||(i>99))) {s++; cout<<i<<" ";};
+					i++;
+				}
+		if (s==0) cout<<"numbers not found";
+		return 0;
+	}
+
+\end{lstlisting}
+
+\begin{center}Входных данных нет.\\ Выходные данные:\\
+100 101 110 111 112 113 114 115 116 117 118 119 121 122 131 133 141 144 151 155 161 166 171 177 181 188 191 199 200 202 211 212 220 221 222 223 224 225 226 227 228 229 232 233 242 244 252 255 262 266 272 277 282 288 292 299 300 303 311 313 322 323 330 331 332 333 334 335 336 337 338 339 343 344 353 355 363 366 373 377 383 388 393 399 400 404 411 414 422 424 433 434 440 441 442 443 444 445 446 447 448 449 454 455 464 466 474 477 484 488 494 499 500 505 511 515 522 525 533 535 544 545 550 551 552 553 554 555 556 557 558 559 565 566 575 577 585 588 595 599 600 606 611 616 622 626 633 636 644 646 655 656 660 661 662 663 664 665 666 667 668 669 676 677 686 688 696 699 700 707 711 717 722 727 733 737 744 747 755 757 766 767 770 771 772 773 774 775 776 777 778 779 787 788 797 799 800 808 811 818 822 828 833 838 844 848 855 858 866 868 877 878 880 881 882 883 884 885 886 887 888 889 898 899 900 909 911 919 922 929 933 939 944 949 955 959 966 969 977 979 988 989 990 991 992 993 994 995 996 997 998 999 \end{center}
+
+\textbf{Комментарии к программе:} \\
+1. Когда мы не знаем, сколько итераций должен произвести цикл, нам понадобится цикл \textbf{while} или \textbf{do...while}. Цикл будет выполняться, пока условие, указанное в круглых скобках является истиной. 
+
+
+\newpage
+\begin{center}
+\section{Страница 47, упражнение III , №20 (doWhile)}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+int main()
+	{
+		using namespace std;
+		int a,b,ta,tb;
+		cout<<"enter border please: "; cin>>ta>>tb;
+		if (ta>tb){ a=tb; b=ta; }
+			else { a=ta; b=tb; };
+		int s=0,i=a;
+		do
+			{
+				int t1,t2,t3;
+				t1=i/100;
+				t2=i/10; t2=t2%10;
+				t3=i%100;t3=t3%10;
+				if (((t1==t2)or(t2==t3)or(t3==t1))&&((i<-99)||(i>99))) {cout<<i<<" "; s++;}
+				i++;
+
+			}while(i<=b);
+		if (s==0) cout<<"numbers not found";
+		return 0;
+	}
+\end{lstlisting}
+
+\begin{center}Входных данных нет.\\ Выходные данные:\\
+100 101 110 111 112 113 114 115 116 117 118 119 121 122 131 133 141 144 151 155 161 166 171 177 181 188 191 199 200 202 211 212 220 221 222 223 224 225 226 227 228 229 232 233 242 244 252 255 262 266 272 277 282 288 292 299 300 303 311 313 322 323 330 331 332 333 334 335 336 337 338 339 343 344 353 355 363 366 373 377 383 388 393 399 400 404 411 414 422 424 433 434 440 441 442 443 444 445 446 447 448 449 454 455 464 466 474 477 484 488 494 499 500 505 511 515 522 525 533 535 544 545 550 551 552 553 554 555 556 557 558 559 565 566 575 577 585 588 595 599 600 606 611 616 622 626 633 636 644 646 655 656 660 661 662 663 664 665 666 667 668 669 676 677 686 688 696 699 700 707 711 717 722 727 733 737 744 747 755 757 766 767 770 771 772 773 774 775 776 777 778 779 787 788 797 799 800 808 811 818 822 828 833 838 844 848 855 858 866 868 877 878 880 881 882 883 884 885 886 887 888 889 898 899 900 909 911 919 922 929 933 939 944 949 955 959 966 969 977 979 988 989 990 991 992 993 994 995 996 997 998 999 \end{center}
+
+\textbf{Комментарии к программе:} \\
+1. Цикл \textbf{do while} очень похож на цикл \textbf{while}. Единственное их различие в том, что при выполнении цикла \textbf{do while} один проход цикла будет выполнен независимо от условия.  Т.е. цикл \textbf{do while} - цикл с постусловием.
+
+\newpage
+\begin{center}
+\section{Страница 48, упражнение IV, №20}
+\colorbox{yellow}{Вывести на экран числа в виде следующей таблицы:}\\
+\end{center}
+\colorbox{yellow}{2 2 2 2 2}\\
+\colorbox{yellow}{3 4 5 6 7}\\
+\colorbox{yellow}{2 2 2 2}\\
+\colorbox{yellow}{2 3 4 5}\\
+\colorbox{yellow}{2 2 2}\\
+\colorbox{yellow}{1 2 3}\\
+\colorbox{yellow}{2 2}\\
+\colorbox{yellow}{0 1}\\
+\colorbox{yellow}{2}\\
+\colorbox{yellow}{-1}\\
+
+\begin{lstlisting}
+#include <iostream>
+int main()
+{
+	using namespace std;
+	int number=10,add=2;
+	for (int i=1;i<=20;i++)
+		{
+			if (i%2==1)
+				{ 
+					for (int j=1;j<=number;j++){cout<<"2 ";} 
+					cout<<endl; 
+				}
+				else { for (j=1;j<=number;j++){cout<<j+add<<" ";} cout<<endl;add--; number--;}
+		}
+	return 0;
+}
+\end{lstlisting}
+
+
+\textbf{Комментарии к программе:} \\
+1. \textbf{\%} - операция нахождения остатка от деления.
+
+\newpage
+\begin{center}
+\section{Страница 48, упражнение V , №20}
+\colorbox{yellow}{Построить таблицу значений ф-ии $y=\frac{1}{x+7}+\ln(1-|x|)$ для $x \in [a,b]$ с шагом h.}\\
+\colorbox{yellow}{Если в некоторой точке x функция не определена, то вывести на экран сообщение об этом}\\
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+const double eps=1e-6;
+void func(double x)
+	{
+	if ((x>-1+eps)&&(x+eps<1)) cout<<fixed<<setprecision(3)<<"x="<<x<<" y="<<1/(x+7)+log(1-abs(x))<<endl;
+		else cout<<"at x="<<x<<" function is not defined"<<endl;
+	}
+int main()
+	{
+		double a,b,h;
+		cout<<"enter border please: ";cin>>a>>b;
+		cout<<"enter step: "; cin>>h;
+			if (b<a){ int t=b; b=a; a=t;} 
+		while (a<=b+eps)
+			{
+				func(a);
+				a+=h;
+			}
+		return 0;
+	}
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 49, упражнение VI , №20}
+\colorbox{yellow}{Построить таблицу значений ф-ии $
+f(x)=\left\{
+\begin{array}{rl}
+\sin(x) &\mbox{, если}\ |x|<\frac{\pi}{2}\\
+   \cos(x)        &\mbox{, если}\ \frac{\pi}{2}\leq|x|\leq\pi\\
+0 &\mbox{, если}\ |x|>\pi
+\end{array}
+\right.
+$для $x \in [a,b]$ с шагом h.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+const double eps=1e-6;
+const double pi=3.14159;
+void func(double x)
+	{
+		if(abs(x)<pi/2+eps) cout<<"x= "<<x<<" sin("<<x<<")= "<<fixed<<setprecision(5)<<sin(x);
+			else if((abs(x)>=pi/2-eps)and(abs(x)<=pi+eps)) cout<<fixed<<setprecision(5)<<"x= "<<x<<" cos("<<x<<")= "<<cos(x);
+				else if (abs(x)>pi-eps) cout<<"0";
+	}
+int main()
+	{
+		double a,b,h;
+		cout<<"enter border please: ";cin>>a>>b;
+		cout<<"enter step please: "; cin>>h;
+		if (b<a){double t=b; b=a; a=t;} 
+		while (a<=b+eps)
+			{
+				func(a);
+				cout<<endl;
+				a+=h;
+			}
+		return 0;
+	}
+\end{lstlisting}
+
+\textbf{Комментарии к программе:} \\
+1. Заголовочный файл \textbf{<iomanip>} реализует инструменты для работы с форматированием вывода.
+
+\newpage
+\begin{center}
+\section{Страница 52, упражнение 4.2 , №20}
+\colorbox{yellow}{Написать программу, вычисляющую первые n элементов заданной последовательности:}\\
+\colorbox{yellow}{$b_1=1, b_2=5, b_{2n}=b_{2n-1}+b_{2n-2}, b_{2n+1}=b_{2n}-b_{2n-1}$}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+int main()
+	{
+		int n,t_ch,t_nc;
+		cout<<"enter n please: "; cin>>n;
+		t_ch=5; t_nc=1; 
+		if (n==1)cout<<"b1="<<t_nc;
+			else if (n>=2) cout<<"b1="<<t_nc<<" b2="<<t_ch<<" ";
+		for(int i=3;i<=n;i++)
+			{
+				if (i%2==1) cout<<"b"<<i<<"="<<t_ch-t_nc<<" ";
+					else cout<<"b"<<i<<"="<<t_nc+t_ch<<" ";
+				t_nc=t_ch-t_nc;
+				t_ch=t_nc+t_ch;
+			}
+		return 0;
+	}
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 59, упражнение I , №20}
+\colorbox{yellow}{Для заданного натурального n и действительного x подсчитать сумму: }\\
+\colorbox{yellow}{$S=\sin(x)+\sin\sin(x)+\sin\sin\sin(x)+...+\underbrace{\sin\sin\sin...\sin(x) }_{n}$ }
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+using namespace std;
+double sin_new(double arg)
+	{
+		return sin(arg);
+	}
+int main()
+	{
+		double x,n,sum;
+		cout<<"enter n and x please: "; cin>>n>>x;
+		sum=sin(x);
+		for(int i=1;i<n;i++)
+			{
+				sum=sum+sin_new(sum);
+			}
+		cout<<sum<<endl;
+		return 0;
+	}
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 60, упражнение II , №20}
+\colorbox{yellow}{Для заданного натурального k и действительного x подсчитать выражение: $\prod\limits_{n=0}^k (1+ \frac{(-1)^{n-1}\cdot x^{2n}}{(n+1)\cdot(n+2)})$ }\\
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+int main()
+	{
+		using namespace std;
+		double temp,st=1,p=1,k,x;
+		int sgn=-1;
+		cout<<"read please k and x: ";cin>>k>>x;
+		for (int n=0;n<=k-1;n++)
+			{
+				st=st*x*x;
+				sgn=sgn*(-1);
+				temp=(1+(sgn*st)/((n+2)*(n+1)));
+				p*=temp;
+				cout<<n+1<<"-st= "<<temp<<" "<<endl;
+			}
+		cout<<"product="<<fixed<<setprecision(2)<<p;
+		return 0;
+	}
+\end{lstlisting}
+
+\textbf{Комментарии к программе:} \\
+1. Операции \textbf{a*=b,a+=b,a-=b,a/=b,a$\%$=b} -сокращение операций: \textbf{a=a*b,a=a+b,a=a-b,a=a/b,a=a $\%$ b} \\
+2. Манипулятор \textbf{fixed} - это не параметризированный манипулятор, так как никаких параметров не принимает, пишется без круглых скобок. Данный манипулятор применяется в паре с параметризированным манипулятором  \textbf{setprecision()} и выполняет фиксированное отображение разрядов после запятой.А манипулятор \textbf{setprecision()} отображает количество знаков после запятой,  причём то, которое указано в скобочках.
+\newpage
+\begin{center}
+\section{Страница 60, упражнение III , №20}
+\colorbox{yellow}{Вычислить бесконечную сумму ряда $\sum\limits_{i=1}^\infty \frac{1}{\sqrt{3^{i}}}$ с заданной точностью $\epsilon$ ($\epsilon$>0).} \\
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+int main()
+	{
+		using namespace std;
+		double st=3,e,sum=0;
+		cout<<"read please eps: "; cin>>e;
+		while ((1/sqrt(st))>=e)
+			{
+				cout<<1/sqrt(st)<<endl;
+				sum+=1/sqrt(st);
+				st*=3;
+			}
+		cout<<"sum="<<fixed<<setprecision(2)<<sum;
+		return 0;
+	}
+
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 62, упражнение III , №20}
+\colorbox{yellow}{Вычислить и вывести на экран значение функции:}\colorbox{yellow}{$F(x)=\frac{\pi}{2}-(x+\frac{x^3}{2*3}+\frac{3^5}{2*4*5}+\frac{3*5*x^7}{2*4*6*7}+\frac{3*5*7*x^9}{2*4*6*8*9}) x \in [-0.9;0.9]$}\\
+\colorbox{yellow}{ на отрезке $[a,b]$ с шагом $h=0,1$ и с точностью $\epsilon$. Результат работы программы представить в виде таблицы.}
+
+
+\end{center}
+\begin{lstlisting}
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+const double pi=3.141592;
+const double ep=1e-6;
+using namespace std;
+double arg(double temp double n double k)
+	{
+	for(int i=k;i<n;i++)
+		{
+		if (i%2==0) temp*=1/i;
+			else temp*=temp;
+		}
+	temp*n;
+	return temp;
+	}
+int main()
+	{
+	double temp,eps,a=-0.9,b=0.9,h=0.1,sum=0;
+	int number=1,n=1,i=2,k=-1;
+	cout<<"read please epsilon:"; cin>>eps;
+	cout<<"number"<<"x"<<"F(x)"<<"n"<<endl;
+	int sch=1;
+	while (a<=b+ep)
+		{
+		temp=a;
+		while (abs(temp)>=eps)
+			{
+			sum+=temp;
+			numb=arg(numb,n,k);
+			temp=a*a*a*numb;
+			n+=2; k+=2;	i++;
+	   		}
+		sch+=2;
+		cout<<number<<"\t"<<fixed<<setprecision(1)<<a<<"\t\t"<<setprecision(4)<<pi/2-sum<<"\t\t"<<i<<endl;
+		a+=h;
+		number++;
+		i=0;sum=0;
+		}
+	return 0;
+	}
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 88, упражнение I , №20, одномерный}
+\colorbox{yellow}{Вывести на экран положительные элементы с нечетными индексами}\\
+\colorbox{yellow}{(для двумерного массива - первый индекс должен быть нечетным)}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+int main()
+	{
+		int n;
+		cout<<"enter n:";cin>>n;
+		int mas[n];
+		for(int i=0;i<n;i++)
+			{
+				cout<<"enter ["<<i+1<<"] element: ";
+				cin>>mas[i];
+				cout<<endl;
+			}
+		for(int i=0;i<n;i++)
+			{
+				if ((mas[i]>0)&&(i%2==1)) cout<<mas[i]<<" ";
+			}
+		cout<<endl;
+		return 0;
+	}
+\end{lstlisting}
+
+\textbf{Комментарии к программе:} \\
+1. \textbf{type name[number]} - объявление одномерного массива \textbf{name} типа \textbf{type}, размерность \textbf{number}\\
+2. Цикл \textbf{for} начинается с нуля из-за того,что нумерация массивов в C++ начинается с нуля.\\
+
+\newpage
+\begin{center}
+\section{Страница 88, упражнение I , №20, двумерный}
+\colorbox{yellow}{Вывести на экран положительные элементы с нечетными индексами}\\
+\colorbox{yellow}{(для двумерного массива - первый индекс должен быть нечетным)}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <iomanip>
+#include <stdio.h>
+using namespace std;
+void printMas(int **arr, int n, int m)
+    {//print mas in monitor
+        cout<<endl;
+        for(int i=0;i<n;i++)
+            {
+                for(int j=0;j<m;j++)
+                    {cout<<setw(5)<<right<<arr[i][j];}
+                cout<<endl;
+            }
+    }
+void del_mas(int **arr,int m)
+    {
+        for (int i=0;i<m;i++) {delete [] arr[i];}
+        delete [] arr;
+    }    
+int main()
+	{
+		int n,m;
+		cout<<"enter n,m:";cin>>n>>m;
+		int **mas=new int*[n]; 
+		for(int i=0;i<n;i++)
+		{		
+			mas[i]=new int[m];
+			for(int j=0;j<m;j++)
+			{
+				cout<<"enter ["<<i+1<<"]["<<j+1<<"] element: ";
+				cin>>mas[i][j];
+			}	
+		}
+		bool search=false;
+		printMas(mas,n,m);
+		for(int i=0;i<n;i++)
+			for (int j=0;j<m;j++) if ((mas[i][j]>0)&&(i%2==1)&&(j%2==1)) 
+				{cout<<"element ["<<i+1<<"]["<<j+1<<"]="<<mas[i][j]<<" "<<endl; search=true;}
+		if (search==false) cout<<"no positive odd";
+		del_mas(mas,m);
+		return 0;
+	}
+\end{lstlisting}
+
+
+\textbf{Комментарии к программе:} \\
+1. \textbf{type **name=new type*[number]} - объявление массива указателей размера \textbf{number}, типа \textbf{type}.\\
+2. \textbf{delete[]} - удаление динамической перенной(ых).\\
+\newpage
+\begin{center}
+\section{Страница 89, упражнение II , №20}
+\colorbox{yellow}{Найти количество пар соседних элементов, в которых предыдущий элемент меньше последующего.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+int main()
+	{
+		int n;
+		cout<<"enter n please: "; cin>>n;
+		int s=0;
+		int *mas=new int[n];	
+		for(int i=0;i<n;i++){cin>>mas[i];}
+			cout<<"array: "<<endl; 
+		for(int i=0;i<n;i++){cout<<mas[i]<<" ";}
+			cout<<endl;
+		for(int i=1;i<n;i++)
+			{
+				if (mas[i]>mas[i-1]) s++;
+			}
+		cout<<"sum="<<s;
+		delete [] mas;
+		return 0;
+	}
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 90, упражнение III , №20}
+\colorbox{yellow}{В каждом столбце найти минимум и заменить его нулём.}
+\end{center}
+\begin{lstlisting}
+#include<iostream>
+using namespace std;
+void print(int **mas_temp, int k, int z)
+        {
+		    for(int i=0;i<k;i++)
+		            {
+		            for(int j=0;j<z;j++)
+		                    {cout<<mas_temp[i][j]<<" \t";}
+					cout<<endl;
+		            }
+			cout<<"\n";
+        }
+void DEL_MAS(int **mas,int n)
+	{for (int i=0;i<n;i++) {delete [] mas[i];} delete [] mas;} 
+int main()
+	{
+	int n,min,min_numb;
+	cout<<"enter n:";cin>>n;
+	int **mas=new int*[n];
+	for(int i=0;i<n;i++)
+		{
+			mas[i]=new int [n];
+			for(int j=0;j<n;j++)
+				{
+					cout<<"enter ["<<i+1<<"]["<<j+1<<"] element: ";
+					cin>>mas[i][j];
+				}
+		}
+	cout<<"input mas:"<<endl; print(mas,n,n);
+	int i=0;
+	for(int j=0;j<n;j++)
+		{
+		min=mas[i][j];min_numb=0;
+		for(int i=1;i<n;i++)
+			{
+				if (mas[i][j]<min) {min=mas[i][j]; min_numb=i;}      
+            }
+        	mas[min_numb][j]=0;
+		}
+	cout<<"output mas:"<<endl; print(mas,n,n);
+	DEL_MAS(mas,n);
+	return 0;
+	}
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 91, задание VI, задача 20}
+\colorbox{yellow}{Для каждого столбца найти номер первой пары одинаковых элементов.}\\
+\colorbox{yellow}{Данные записать в новый массив.}
+\end{center}
+\begin{lstlisting}
+#include<iostream>
+using namespace std;
+
+bool zero=false;
+void DEL_MAS(int **mas,int n)
+	{for (int i=0;i<n;i++) {delete [] mas[i];} delete [] mas;} 
+void print(int **mas_temp, int k, int z)
+        {
+        for(int i=0;i<k;i++)
+                {
+                for(int j=0;j<z;j++)
+                        {
+                        cout<<mas_temp[i][j]<<" \t";
+                        }
+		cout<<endl;
+                }
+	cout<<"\n";
+        }
+void search(int **mas,int n)
+	{
+	int temp,temp_index;
+        bool found=true;
+        	for(int j=0;j<n;j++)
+                	{
+                	for(int i=0;i<n;i++)
+                        	{
+                        	temp=mas[i][j]; temp_index=i;
+                        	for(int k=i+1;k<n;k++)
+                                	{
+                                	if (mas[k][j]==temp)
+																				{
+																					cout<<"perva9 para elementov in stolbech "<<j+1<<" this is element , index: "<<temp_index+1<<" "<<k+1<<endl;
+																					found=false;
+																					zero=true; 
+																					break;
+																				}
+                                	}
+                        	if (found==false) {found=true; break;} temp_index=0;
+                        	}
+                	}
+	}
+int main()
+	{	
+		int n,i,j;
+		cout<<"enter n:";cin>>n;
+		int **mas=new int*[n];
+		for(int i=0;i<n;i++)
+			{
+			mas[i]=new int [n];
+			for(int j=0;j<n;j++)
+				{
+				cout<<"enter ["<<i+1<<"]["<<j+1<<"] element: ";
+				cin>>mas[i][j];
+				}
+			}
+		print(mas,n,n);
+		search(mas,n);                                    
+		DEL_MAS(mas,n);
+		if (zero==false) cout<<"ravnih net";
+		return 0;
+	}
+\end{lstlisting}
+
+\newpage
+\begin{center}
+\section{Страница 91, упражнение V, №15}
+\colorbox{yellow}{Вставить новый элемент между всеми парами элементов, имеющими разные знаки.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+int main()
+	{
+		int n; cout<<"enter n please: "; cin>>n; 
+		int mas[2*n];
+		int elem; cout<<"enter element please:"; cin>>elem;
+		for(int i=0;i<n;i++) cin>>mas[i];
+		int i=1;
+		while (i<=n)
+			{
+			if (mas[i]*mas[i-1]<0)
+				{
+				n++;
+				for (int j=n;j>=i+1;j--) mas[j]=mas[j-1];
+				mas[i]=elem;
+				i+=2;
+				}		
+			else i++;
+			}
+		for (int i=0;i<n;i++){cout<<mas[i]<<" ";}
+	return 0;
+}
+\end{lstlisting}
+
+\textbf{Алгоритм:}
+\newline
+Создаём массив \textbf{mas} с размерностью в два раза большей, чем мы задали. Далее, при нахождении элемента=\textbf{elem} просто делаем сдвиг. Таким образом получаем массив со вставленным элементом.
+
+\newpage
+\begin{center}
+\section{Страница 92, упражнение VI, №15}
+\colorbox{yellow}{Уплотнить массив, удалив из него все нулевые строки и столбцы.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void del_mas(int **arr,int m)
+    {
+        for (int i=0;i<m;i++) {delete [] arr[i];}
+        delete [] arr;
+    }    
+
+void printMas(int **arr, int n, int m)
+    {//out array
+        cout<<endl;
+        for(int i=0;i<n;i++)
+            {
+                for(int j=0;j<m;j++)
+                    {
+                        cout<<arr[i][j]<<" \t";
+                    }
+                cout<<endl;
+            }
+    }
+int main ()
+    {
+    int **mas, n, m,t, i,j, y;
+    bool search;
+    cout<<"size please(n,m): "; cin>>n>>m;
+    //cre_mas
+    mas=new int*[n]; 
+    for(i=0; i<n; i++) mas[i]=new int[m];
+   //input array
+    bool zero=false;
+    for(i=0; i<n; i++)
+       for(j=0; j<m; j++)
+       {
+          cout<<"["<<i+1<<"]["<<j+1<<"]= ";
+          cin>>mas[i][j]; 
+            if (mas[i][j]==0) zero=true;
+       }
+
+      for(i=0; i<n; i++)
+        {
+                t=0;
+                for(j=0; j<m; j++)
+                        if(mas[i][j]!=0)
+                                t=1;
+                if(t==0)
+                {
+                        for(y=i; y<n-1; y++)
+                                for(j=0; j<m; j++)
+                                        mas[y][j]=mas[y+1][j];
+                        n--;
+                }
+        }
+        for(i=0; i<m; i++)
+        {
+                t=0;
+                for(j=0; j<n; j++)
+                        if(mas[j][i]!=0)
+                                t=1;
+                if(t==0)
+                {
+                        for(y=i; y<m-1; y++)
+                                for(j=0; j<n; j++)
+                                        mas[j][y]=mas[j][y+1];
+                        m--;
+                }
+        }
+
+        printMas(mas,n,m);
+        return 0;
+    }
+\end{lstlisting}
+
+
+\newpage
+\begin{center}
+\usefont{T2A}{cmr}{m}{n} {\fontsize{20}{10}\selectfont {Основы программирования на языке с++ ЧАСТЬ 2}}
+\end{center}
+
+\begin{center}
+\section{Страница 25, упражнение II, №19}
+\colorbox{yellow}{Дана строка-предложение. Зашифровать её, поместив вначале все символы, расположенные на четных}\\
+\colorbox{yellow}{позициях строки, а зачем, в обратном порядке, все символы, расположенные на нечетных позициях}\\
+\colorbox{yellow}{(например, строка "Программа" превратится в "ргамамроП"}
+\end{center}
+\begin{lstlisting}
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+	{
+		string strOne,strTwo;
+		getline(cin,strOne);
+		const int len=strOne.length();
+		for(int i=1;i<len;i+=2){strTwo+=strOne.substr(i,1);}
+		for(int i=len-1;i>=0;i--){if (i%2==0) strTwo+=strOne.substr(i,1); }
+		cout<<strTwo;
+		return 0;
+	}
+\end{lstlisting}
+\textbf{Алгоритм:}
+\newline
+Переписываем в новую \textbf{string}'овскую переменную(\textbf{strTwo)} сначала все нечетные элементы, после все четные элементы в обратном порядке.\\
+\textbf{Комментарии к программе:} \\
+1. тип \textbf{string} - тип языка С++. По своей сути является массивом символов.\\
+2. \textbf{getline} - построчно извлекает строки из входного потока\\
+3. Операция \textbf{strOne.length()} вычисляет количество символов в строке. Нуль символ не учитывается.\\
+4. Операция \textbf{strOne.substr(i,n)} -возвращает \textbf{n} символов начиная с позиции \textbf{i}.\\
+
+
+\newpage
+\begin{center}
+\section{Страница 56, задание 4.3 , задача 20}
+\colorbox{yellow}{Дан текстовый файл. Переписать в новый файл все его строки, удалив из них символы,}\\
+\colorbox{yellow}{стоящие на четных местах.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+	{
+		ofstream out("out_file");
+		ifstream in("in_file");
+		if (!in.is_open()) cout << "Not open!\n";
+			else
+				{
+					int number=0;
+					while (in.peek()!=EOF)
+						{
+						char c = in.get();
+						if (c!='\0') number++;
+						if ((number%2!=0)&&(c!='\0')&&(c!=' ')&&(c!='\n')) out<<c;
+							else if (c==' ') out<<" ";
+								else if (c=='\n') {number=0; out<<'\n';}
+						}
+				}
+		out.close();
+		in.close();
+		return 0;
+	}
+\end{lstlisting}
+
+
+\textbf{Примечание:}
+\newline 
+1. Из-за того, что считываем мы \textbf{char}'овскую переменную, то нам нужна "хитрая" проверка на символ окончания строки, пробел, перенос строки.
+\newline
+2. Если мы обнаруживаем перенос, то счетчик символов(\textbf{number}) нужно обнулять, ибо для каждый строки мы делаем свою нумерацию.
+
+\newpage
+\begin{center}
+\section{Страница 57, задание II, задача 20}
+\colorbox{yellow}{Дан текстовый файл, компонентами которого являются символы.}\\
+\colorbox{yellow}{Переписать в новый файл все символы, за которыми в первом файле следует данная буква.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+	{
+		ofstream out("out_file");
+		ifstream in("in_file");
+		string str;
+		char sym;
+		cout<<"read sym please: "; cin>>sym;
+		if (!in.is_open()) cout << "Not open!\n";
+			else
+				{
+					
+					while (getline(in,str))
+						{
+						for(int i=0;i<str.length()-1;i++){if ((str[i]==sym)&&(!isspace(str[i+1]))) out<<str[i+1];}
+						
+						}
+				}
+		out.close();
+		in.close();
+		return 0;
+	}
+\end{lstlisting}
+
+\textbf{Примечания:}
+\newline
+1. Идем в цикле до \textbf{str.length()-1} из-за того,что выводим мы следующий элемент(если он подходит). Если мы будем шагать в цикле до \textbf{str.length()}, то произойдет выход за пределы массива.
+
+\newpage
+\begin{center}
+\section{Страница 68, упражнение II, №20}
+\colorbox{yellow}{На основе данных входного файла составить списко студентов, включающий ФИО,курс, группу, результат}\\
+\colorbox{yellow}{забега. Вывести в новый файл список студентов, удалив из него информацию о тех студентах, которые}\\
+\colorbox{yellow}{не выполнили норматив по бегу.}
+\end{center}
+\begin{lstlisting}
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+struct point
+	{
+		string name,level,group;
+		int results;
+	};
+
+int numbLineInFile (void)
+	{
+	    ifstream input ("in_file");
+	    int amountLines = 0;
+	    while (input)
+	        {
+	            string line;
+	            getline (input, line);
+	            if (line[0]!='\0') amountLines++;
+	        }
+	    input.close();  
+	    return amountLines;
+	}
+
+void printToFileArr(point *arr, int funStrAmount,int min_ball)
+	{
+		int number=1;
+		ofstream out("out_file");
+		out<<"#\tname\t\t\t\tcourse\tgroup\tresults"<<endl;
+		for(int i=0;i<funStrAmount;i++)  
+			if (arr[i].results>=min_ball)
+			{
+				out<<number<<"\t"<<arr[i].name<<"\t\t\t"<<arr[i].level<<"\t"<<arr[i].group<<"\t"<<arr[i].results<<endl;
+				number++;
+			}
+		out.close();
+	}
+int main()
+	{
+		int studAmont=0, strAmont=numbLineInFile(); 
+		point *student=new point[strAmont];
+		ifstream in ("in_file");
+		if (!in.is_open()) cout << "Not open!!"<<endl;
+			else
+				{
+					string str,tempResults;
+					while (getline(in,str))
+						{
+						int space=0;
+						int i=0; 
+						while (i!=str.length()+1)
+							{
+								if (str[i]!=' ')
+									{
+										switch (space) 
+											{
+												case 0:
+												case 1: 
+												case 2: 
+													student[studAmont].name+=str[i];
+													break;
+												case 3:
+													student[studAmont].level+=str[i];
+													break;
+			  									case 4:
+			  										student[studAmont].group+=str[i];
+			  										break;
+			  									case 5:
+			  										tempResults+=str[i];
+			  										break;
+											}
+									}
+								else 
+									{ 
+										if ((space==0)||(space==1)) student[studAmont].name+=' '; 
+										space++; 
+									}
+								i++;
+							}
+						student[studAmont].results=stoi(tempResults); // string to int(c++11)
+						studAmont++;
+						tempResults="";
+						}
+					in.close();
+				}
+		cout<<"Enter min ball please: "; int min_ball; cin>>min_ball;
+		printToFileArr(student,strAmont,min_ball);  
+		delete [] student;
+		return 0;
+	}
+\end{lstlisting}
+
+
+
+\textbf{Комментарии к программе:} \\
+1.Ключевое слово \textbf{struct} указывает тип структуры или переменную типа структуры\\
+\textbf{Примечания:}
+\newline
+1. Так как нам нет смысла в хранении группы(переменная group) и курса(переменная level) в \textbf{int}-типе, то они представляются в типе \textbf{string}.
+\newline
+2. функция \textbf{stoi} появилась только в стандарте с++11 (именно из-за этого нужны ключи компиляции(для gcc:\textbf{-std=c++11})).
+\newline
+3. Пробелы между именем, отчеством и фамилией добавляются с помощью хака:\newline\textbf{"if (...) student[studAmount].name+' ';"}
+\newline
+4. Алгоритм немного не рациональный, так как подразумевает открытие файла два раза.
+
+\newpage
+\begin{center}
+\section{Страница 66 , задание I, задача 19-20 }
+\colorbox{yellow}{Найти три различные точки из заданного множества точкек, образующих треугольник наименьшего периметра.}
+\end{center}
+\fontsize{9}{10}
+\begin{lstlisting}
+#include <iostream>
+#include <cmath>
+using namespace std;
+const double eps=1e-5;
+struct point
+	{
+		double x,y;
+		void printDot();
+	};
+
+double TrianglePer(point k1, point k2, point k3)
+	{
+	   double a,b,c;
+	   a=sqrt(pow(k2.x-k1.x,2)+pow(k2.y-k1.y,2));
+	   b=sqrt(pow(k3.x-k1.x,2)+pow(k3.y-k1.y,2));
+	   c=sqrt(pow(k3.x-k2.x,2)+pow(k3.y-k2.y,2));
+	   if ((a<=b+c-eps)&&(b<=a+c-eps)&&(c<=a+b-eps)) return a+b+c;
+	   		else return 0;
+	}
+
+void point::printDot()
+	{
+		cout<<"{"<<x<<","<<y<<"}"<<endl;
+	}
+
+int main()
+	{
+		cout<<"Enter the number of a point in the set: "; int sizeMas; cin>>sizeMas;
+		point *dot=new point[sizeMas]; dot[0].printDot();
+		for(int i=0;i<sizeMas;i++) 
+			{ 
+				cout<<"
+Enter the coordinates of the point(x,y): "; 
+				cin>>dot[i].x>>dot[i].y;
+			}
+		double min;
+		point d1,d2,d3;
+			if (sizeMas<3) cout<<"
+Triangle does not exist"<<endl;
+					else if (sizeMas>=3)
+						{
+							bool first=true; 							
+							for(int i=0;i<sizeMas;i++) 
+								for(int j=i+1;j<sizeMas;j++) 
+									for(int k=j+1;k<sizeMas;k++)
+										{
+											double perim=TrianglePer(dot[i],dot[j],dot[k]);
+												if(perim<min) { min=perim; d1=dot[i]; d2=dot[j]; d3=dot[k]; }
+													else if (first==true) {min=perim; first=false; d1=dot[i]; d2=dot[j]; d3=dot[k];}
+												
+										} 
+						if (min!=0) { cout<<"min="<<min<<endl; d1.printDot(); d2.printDot(); d3.printDot(); }
+							else cout<<"does not exist.";
+						}
+		delete [] dot;
+		return 0;
+	}
+\end{lstlisting}
+
+
+\textbf{Примечания:}
+\newline 
+1. Используем структуру point, для хранения абсцисы и ординаты точки.
+\newline 
+2. Функция \textbf{TrianglePer} считает стороны треугольника и сразу проверяет его возможность существования.
+\newline 
+3. Печатаем точки прямо из структуры. Функция \textbf{printDot()}.
+\newline 
+4. Перебор осуществляется $\sim$ за $О(n^3).$
+\end{flushleft}
+
+
+\vfill
+\usefont{T1}{cmr}{m}{n}\center {\fontsize{15}{10}\selectfont created in {\LaTeX}} 
+\end{document}
