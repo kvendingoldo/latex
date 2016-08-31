@@ -332,7 +332,9 @@ $$f(x)=\sqrt{\frac{x^3(2a-x)}{a^2}}, \; \; g(x)=0$$
 
 Геометрический параметр $t=\frac{y}{x}$ угловой коэффициент полярного радиуса $OM$, где точка $M(x, y)$ опишет всю петлю кривой при изменении $t$ от $0$ до $+\infty$.
 
-Преобразуя криволинейный интеграл формулы $S=\frac{1}{2}\oint xdy-ydx$ в обыкновенный интеграл с переменной $t$ , получим $S=\frac{1}{2}\oint\limits_{+C} xdy-ydx = \frac{9a^2}{2}\int\limits_{0}^{+\infty}\frac{t^2}{(1+t^3)^2}=\frac{3a^2}{2}\lim\limits_{\beta \to +\infty}\int\limits_{0}^{\beta}(1+t^3)^{-2}d(1+t^3)=\frac{3a^2}{2}\lim\limits_{\beta \to +\infty}\frac{1}{1+t^3}|_{\beta}^{0}$
+Преобразуя криволинейный интеграл формулы $$S=\frac{1}{2}\oint xdy-ydx$$ в обыкновенный интеграл с переменной $t$ , получим $$S=\frac{1}{2}\oint\limits_{+C} xdy-ydx = \frac{9a^2}{2}\int\limits_{0}^{+\infty}\frac{t^2}{(1+t^3)^2}=$$
+$$
+=\frac{3a^2}{2}\lim\limits_{\beta \to +\infty}\int\limits_{0}^{\beta}(1+t^3)^{-2}d(1+t^3)=\frac{3a^2}{2}\lim\limits_{\beta \to +\infty}\frac{1}{1+t^3}|_{\beta}^{0}$$
 
 В итоге, считая последний предел в Maxima получим ответ: $S=\frac{3a^2}{2}$
 
@@ -365,17 +367,17 @@ $$\\
 
 Перейдем к полярной системе координат. Используя формулы перехода $x=\rho\cos{\phi}, y=\rho\sin{\phi} получим уравнения эллипсов в полярных координатах:$
 
-$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \Rightarrow b^2\rho^2\cos^2{\phi}+a^2\rho^2\sin^2{\phi}=a^2b^2, \rho_1^2=\frac{a^2b^2}{b^2\cos^2{\phi}+a^2\sin^2{\phi}};$
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \Rightarrow b^2\rho^2\cos^2{\phi}+a^2\rho^2\sin^2{\phi}=a^2b^2, \rho_1^2=\frac{a^2b^2}{b^2\cos^2{\phi}+a^2\sin^2{\phi}};$$
 
-$\frac{x^2}{b^2}+\frac{y^2}{a^2}=1 \Rightarrow a^2\rho^2\cos^2{\phi}+b^2\rho^2\sin^2{\phi}=b^2a^2, \rho_2^2=\frac{a^2b^2}{a^2\cos^2{\phi}+b^2\sin^2{\phi}};$
+$$\frac{x^2}{b^2}+\frac{y^2}{a^2}=1 \Rightarrow a^2\rho^2\cos^2{\phi}+b^2\rho^2\sin^2{\phi}=b^2a^2, \rho_2^2=\frac{a^2b^2}{a^2\cos^2{\phi}+b^2\sin^2{\phi}};$$
 
 Учитывая симметрию полученной области относительно координатных осей, вычислим сначала площадь ее четвертой части. Она равна сумме площадей $S_1$ и $S_2$, разделённых лучом $\phi=\frac{\pi}{4}$. Исходя из симметрии задачи, площади $S_1$ и $S_2$ должны быть равны. 
 
 Убедимся в этом, вычислив каждую из них в отдельности:
 
-$S_2=\frac{1}{2}\int\limits_{0}^{\frac{\pi}{4}} \rho_2^2d\phi$
-и
-$S_1=\frac{a^2b^2}{2}\int\limits_{\frac{\pi}{4}}^{\frac{\pi}{2}} \rho_1^2d\phi$
+$$S_2=\frac{1}{2}\int\limits_{0}^{\frac{\pi}{4}} \rho_2^2d\phi \; ,$$
+
+$$S_1=\frac{a^2b^2}{2}\int\limits_{\frac{\pi}{4}}^{\frac{\pi}{2}} \rho_1^2d\phi$$
 
 Произведём вычисления в системе Maxima и получим : 
 
@@ -385,12 +387,7 @@ $$S_2=\frac{ab}{2}\arctg{\frac{b}{a}} \; S_1=\frac{ab}{2}\arctg{\frac{b}{a}}$$
 
 $$S=4(S_1+S_2)=4ab\arctg{\frac{b}{a}}$$
 
-Ответ: $$S=4(S_1+S_2)=4ab\arctg{\frac{b}{a}}$$
-
-\newpage
-Перепишем уравнения в виде:
-
-$$f(x)=\sqrt{(1-\frac{x^2}{a^2})b^2}, \;\; g(x)=\sqrt{(1-\frac{x^2}{b^2})a^2 }$$
+Ответ: $S=4(S_1+S_2)=4ab\arctg{\frac{b}{a}}$
 
 \item[5.] Определить объем тела, образованного вращением фигуры, ограниченной линиями:\\
 
