@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: /Users/asharov/projects/personal/latex/p-adics/.texpadtmp/main.aux
+The style file: ../biblio/ugost.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: ../biblio/biblio.bib
+You can't pop an empty literal stack for entry bib:analysis:volovich
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:analysis:baker
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:analysis:vladimirov
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:analysis:anashin
+while executing---line 1930 of file ../biblio/ugost.bst
+Warning--empty year in bib:analysis:anashin
+You can't pop an empty literal stack for entry bib:analysis:ciocan
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:analysis:anashin:en
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:analysis:gouvea
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:analysis:alain
+while executing---line 1930 of file ../biblio/ugost.bst
+You've used 9 entries,
+            3890 wiz_defined-function locations,
+            1133 strings with 9884 characters,
+and the built_in function-call counts, 3018 in all, are:
+= -- 392
+> -- 48
+< -- 10
++ -- 21
+- -- 12
+* -- 172
+:= -- 283
+add.period$ -- 36
+call.type$ -- 9
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 201
+empty$ -- 405
+format.name$ -- 21
+if$ -- 851
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 0
+newline$ -- 65
+num.names$ -- 18
+pop$ -- 87
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 75
+stack$ -- 0
+substring$ -- 14
+swap$ -- 112
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 9
+warning$ -- 1
+while$ -- 10
+width$ -- 10
+write$ -- 135
+(There were 8 error messages)

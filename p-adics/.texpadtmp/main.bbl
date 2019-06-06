@@ -1,0 +1,74 @@
+\begin{thebibliography}{1}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+
+\bibitem{bib:kozirev:2008}
+\selectlanguageifdefined{russian}
+\BibEmph{Козырев,~С.~В.} Методы и приложения
+  ультраметрического и p-адического
+  анализа: от теории всплесков до биофизики
+  ~/ С.~В.~Козырев~// \BibEmph{Совр. пробл. матем.}{}
+\newblock 2008.{}
+\newblock Т.~12.{}
+\newblock {С.}~3–168.
+
+\bibitem{bib:analysis:volovich}
+\selectlanguageifdefined{russian}
+\BibEmph{И.В.,~Волович}. p–Адическая
+  математическая физика: основные
+  конструкции, применения к сложным и
+  наноскопическим системам ~/ {}
+\newblock [Волович~И.В., Козырев~С.В.~: {б.\ и.}], 2008.{}
+\newblock 30~{с.}
+
+\bibitem{bib:analysis:baker}
+\selectlanguageifdefined{english}
+\BibEmph{Baker,~A.} An Introduction to p-adic Numbers and p-adic Analysis ~/ {}
+\newblock [A.~Baker~: s.\ n.], 2017.{}
+\newblock 64~p.
+
+\bibitem{bib:analysis:vladimirov}
+\selectlanguageifdefined{russian}
+\BibEmph{Владимиров,~В.C.} p-Адический анализ и
+  математическая физика ~/ {}
+\newblock [В.C.~Владимиров, Волович~И.В.,
+  Зеленов~Е.И.]~: М.:Физматлит, 1994.{}
+\newblock 352~{с.}
+
+\bibitem{bib:analysis:anashin}
+\selectlanguageifdefined{russian}
+\BibEmph{Анашин,~В.С.} Введение в прикладной
+  p-адический анализ ~/ {}
+\newblock [В.С.~Анашин~: {б.\ и.}].
+
+\bibitem{bib:analysis:ciocan}
+\selectlanguageifdefined{english}
+\BibEmph{Ciocan,~N.} P-adic Functions - Part 1 ~/ {}
+\newblock [N.~Ciocan~: s.\ n.], 2011.{}
+\newblock 11~p.
+
+\bibitem{bib:analysis:anashin:en}
+\selectlanguageifdefined{english}
+\BibEmph{Anashin,~V.} The p-adic ergodic theory and applications ~/ {}
+\newblock [V.~Anashin~: s.\ n.], 2014.{}
+\newblock 221~p.
+
+\bibitem{bib:analysis:gouvea}
+\selectlanguageifdefined{english}
+\BibEmph{Gouvea,~F.Q.} p-adic Numbers: An Introduction ~/ {}
+\newblock [F.Q.~Gouvea]~: Springer, 2011.{}
+\newblock 306~p.
+
+\bibitem{bib:analysis:alain}
+\selectlanguageifdefined{english}
+\BibEmph{Alain,~M.R.} A Course in p-adic Analysis ~/ {}
+\newblock [M.R.~Alain]~: Springer-Verlag New York, 2000.{}
+\newblock 438~p.
+
+\end{thebibliography}
