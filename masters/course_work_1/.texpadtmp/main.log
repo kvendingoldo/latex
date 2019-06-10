@@ -1,0 +1,1162 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.24)  11 JUN 2019 02:08
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(./SCWorks.cls (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/extsizes/extsizes.sty
+Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
+
+
+Package ExtSizes Warning: It is better to use one of the extsizes classes,
+ if you can.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/03/24 v5.7 Page Geometry
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count91
+\calc@Bcount=\count92
+\calc@Adimen=\dimen111
+\calc@Bdimen=\dimen112
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count93
+\calc@Cskip=\skip45
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box26
+\beforetitleunit=\skip46
+\aftertitleunit=\skip47
+\ttl@plus=\dimen113
+\ttl@minus=\dimen114
+\ttl@toksa=\toks16
+\titlewidth=\dimen115
+\titlewidthlast=\dimen116
+\titlewidthfirst=\dimen117
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen118
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@ContinuedFloat=\count94
+)
+\tmp=\skip48
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/block.tss
+File: block.tss 2016/03/15
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+Now handling font encoding T2A ...
+... processing UTF-8 mapping file for font encoding T2A
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t2aenc.dfu
+File: t2aenc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0400 (decimal 1024)
+   defining Unicode char U+0401 (decimal 1025)
+   defining Unicode char U+0402 (decimal 1026)
+   defining Unicode char U+0403 (decimal 1027)
+   defining Unicode char U+0404 (decimal 1028)
+   defining Unicode char U+0405 (decimal 1029)
+   defining Unicode char U+0406 (decimal 1030)
+   defining Unicode char U+0407 (decimal 1031)
+   defining Unicode char U+0408 (decimal 1032)
+   defining Unicode char U+0409 (decimal 1033)
+   defining Unicode char U+040A (decimal 1034)
+   defining Unicode char U+040B (decimal 1035)
+   defining Unicode char U+040C (decimal 1036)
+   defining Unicode char U+040D (decimal 1037)
+   defining Unicode char U+040E (decimal 1038)
+   defining Unicode char U+040F (decimal 1039)
+   defining Unicode char U+0410 (decimal 1040)
+   defining Unicode char U+0411 (decimal 1041)
+   defining Unicode char U+0412 (decimal 1042)
+   defining Unicode char U+0413 (decimal 1043)
+   defining Unicode char U+0414 (decimal 1044)
+   defining Unicode char U+0415 (decimal 1045)
+   defining Unicode char U+0416 (decimal 1046)
+   defining Unicode char U+0417 (decimal 1047)
+   defining Unicode char U+0418 (decimal 1048)
+   defining Unicode char U+0419 (decimal 1049)
+   defining Unicode char U+041A (decimal 1050)
+   defining Unicode char U+041B (decimal 1051)
+   defining Unicode char U+041C (decimal 1052)
+   defining Unicode char U+041D (decimal 1053)
+   defining Unicode char U+041E (decimal 1054)
+   defining Unicode char U+041F (decimal 1055)
+   defining Unicode char U+0420 (decimal 1056)
+   defining Unicode char U+0421 (decimal 1057)
+   defining Unicode char U+0422 (decimal 1058)
+   defining Unicode char U+0423 (decimal 1059)
+   defining Unicode char U+0424 (decimal 1060)
+   defining Unicode char U+0425 (decimal 1061)
+   defining Unicode char U+0426 (decimal 1062)
+   defining Unicode char U+0427 (decimal 1063)
+   defining Unicode char U+0428 (decimal 1064)
+   defining Unicode char U+0429 (decimal 1065)
+   defining Unicode char U+042A (decimal 1066)
+   defining Unicode char U+042B (decimal 1067)
+   defining Unicode char U+042C (decimal 1068)
+   defining Unicode char U+042D (decimal 1069)
+   defining Unicode char U+042E (decimal 1070)
+   defining Unicode char U+042F (decimal 1071)
+   defining Unicode char U+0430 (decimal 1072)
+   defining Unicode char U+0431 (decimal 1073)
+   defining Unicode char U+0432 (decimal 1074)
+   defining Unicode char U+0433 (decimal 1075)
+   defining Unicode char U+0434 (decimal 1076)
+   defining Unicode char U+0435 (decimal 1077)
+   defining Unicode char U+0436 (decimal 1078)
+   defining Unicode char U+0437 (decimal 1079)
+   defining Unicode char U+0438 (decimal 1080)
+   defining Unicode char U+0439 (decimal 1081)
+   defining Unicode char U+043A (decimal 1082)
+   defining Unicode char U+043B (decimal 1083)
+   defining Unicode char U+043C (decimal 1084)
+   defining Unicode char U+043D (decimal 1085)
+   defining Unicode char U+043E (decimal 1086)
+   defining Unicode char U+043F (decimal 1087)
+   defining Unicode char U+0440 (decimal 1088)
+   defining Unicode char U+0441 (decimal 1089)
+   defining Unicode char U+0442 (decimal 1090)
+   defining Unicode char U+0443 (decimal 1091)
+   defining Unicode char U+0444 (decimal 1092)
+   defining Unicode char U+0445 (decimal 1093)
+   defining Unicode char U+0446 (decimal 1094)
+   defining Unicode char U+0447 (decimal 1095)
+   defining Unicode char U+0448 (decimal 1096)
+   defining Unicode char U+0449 (decimal 1097)
+   defining Unicode char U+044A (decimal 1098)
+   defining Unicode char U+044B (decimal 1099)
+   defining Unicode char U+044C (decimal 1100)
+   defining Unicode char U+044D (decimal 1101)
+   defining Unicode char U+044E (decimal 1102)
+   defining Unicode char U+044F (decimal 1103)
+   defining Unicode char U+0450 (decimal 1104)
+   defining Unicode char U+0451 (decimal 1105)
+   defining Unicode char U+0452 (decimal 1106)
+   defining Unicode char U+0453 (decimal 1107)
+   defining Unicode char U+0454 (decimal 1108)
+   defining Unicode char U+0455 (decimal 1109)
+   defining Unicode char U+0456 (decimal 1110)
+   defining Unicode char U+0457 (decimal 1111)
+   defining Unicode char U+0458 (decimal 1112)
+   defining Unicode char U+0459 (decimal 1113)
+   defining Unicode char U+045A (decimal 1114)
+   defining Unicode char U+045B (decimal 1115)
+   defining Unicode char U+045C (decimal 1116)
+   defining Unicode char U+045D (decimal 1117)
+   defining Unicode char U+045E (decimal 1118)
+   defining Unicode char U+045F (decimal 1119)
+   defining Unicode char U+0490 (decimal 1168)
+   defining Unicode char U+0491 (decimal 1169)
+   defining Unicode char U+0492 (decimal 1170)
+   defining Unicode char U+0493 (decimal 1171)
+   defining Unicode char U+0496 (decimal 1174)
+   defining Unicode char U+0497 (decimal 1175)
+   defining Unicode char U+0498 (decimal 1176)
+   defining Unicode char U+0499 (decimal 1177)
+   defining Unicode char U+049A (decimal 1178)
+   defining Unicode char U+049B (decimal 1179)
+   defining Unicode char U+049C (decimal 1180)
+   defining Unicode char U+049D (decimal 1181)
+   defining Unicode char U+04A0 (decimal 1184)
+   defining Unicode char U+04A1 (decimal 1185)
+   defining Unicode char U+04A2 (decimal 1186)
+   defining Unicode char U+04A3 (decimal 1187)
+   defining Unicode char U+04A4 (decimal 1188)
+   defining Unicode char U+04A5 (decimal 1189)
+   defining Unicode char U+04AA (decimal 1194)
+   defining Unicode char U+04AB (decimal 1195)
+   defining Unicode char U+04AE (decimal 1198)
+   defining Unicode char U+04AF (decimal 1199)
+   defining Unicode char U+04B0 (decimal 1200)
+   defining Unicode char U+04B1 (decimal 1201)
+   defining Unicode char U+04B2 (decimal 1202)
+   defining Unicode char U+04B3 (decimal 1203)
+   defining Unicode char U+04B6 (decimal 1206)
+   defining Unicode char U+04B7 (decimal 1207)
+   defining Unicode char U+04B8 (decimal 1208)
+   defining Unicode char U+04B9 (decimal 1209)
+   defining Unicode char U+04BA (decimal 1210)
+   defining Unicode char U+04BB (decimal 1211)
+   defining Unicode char U+04C0 (decimal 1216)
+   defining Unicode char U+04C1 (decimal 1217)
+   defining Unicode char U+04C2 (decimal 1218)
+   defining Unicode char U+04D0 (decimal 1232)
+   defining Unicode char U+04D1 (decimal 1233)
+   defining Unicode char U+04D2 (decimal 1234)
+   defining Unicode char U+04D3 (decimal 1235)
+   defining Unicode char U+04D4 (decimal 1236)
+   defining Unicode char U+04D5 (decimal 1237)
+   defining Unicode char U+04D6 (decimal 1238)
+   defining Unicode char U+04D7 (decimal 1239)
+   defining Unicode char U+04D8 (decimal 1240)
+   defining Unicode char U+04D9 (decimal 1241)
+   defining Unicode char U+04DA (decimal 1242)
+   defining Unicode char U+04DB (decimal 1243)
+   defining Unicode char U+04DC (decimal 1244)
+   defining Unicode char U+04DD (decimal 1245)
+   defining Unicode char U+04DE (decimal 1246)
+   defining Unicode char U+04DF (decimal 1247)
+   defining Unicode char U+04E2 (decimal 1250)
+   defining Unicode char U+04E3 (decimal 1251)
+   defining Unicode char U+04E4 (decimal 1252)
+   defining Unicode char U+04E5 (decimal 1253)
+   defining Unicode char U+04E6 (decimal 1254)
+   defining Unicode char U+04E7 (decimal 1255)
+   defining Unicode char U+04E8 (decimal 1256)
+   defining Unicode char U+04E9 (decimal 1257)
+   defining Unicode char U+04EC (decimal 1260)
+   defining Unicode char U+04ED (decimal 1261)
+   defining Unicode char U+04EE (decimal 1262)
+   defining Unicode char U+04EF (decimal 1263)
+   defining Unicode char U+04F0 (decimal 1264)
+   defining Unicode char U+04F1 (decimal 1265)
+   defining Unicode char U+04F2 (decimal 1266)
+   defining Unicode char U+04F3 (decimal 1267)
+   defining Unicode char U+04F4 (decimal 1268)
+   defining Unicode char U+04F5 (decimal 1269)
+   defining Unicode char U+04F8 (decimal 1272)
+   defining Unicode char U+04F9 (decimal 1273)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2423 (decimal 9251)
+))
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 105.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel-russian/russianb.ldf
+Language: russian 2017/08/12 1.3j Russian support for the Babel system
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count95
+\U@D=\dimen126
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count96
+)
+Package babel Info: Making " an active character on input line 120.
+Package babel Info: Default for \cyrdash is provided on input line 157.
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
+)
+\AM@pagewidth=\dimen129
+\AM@pageheight=\dimen130
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box27
+\AM@global@opts=\toks19
+\AM@toc@title=\toks20
+\c@AM@survey=\count97
+\AM@templatesizebox=\box28
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen131
+\Hy@linkcounter=\count98
+\Hy@pagecounter=\count99
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count100
+Package hyperref Info: Option `unicode' set `true' on input line 3456.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count101
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen132
+\Fld@menulength=\count102
+\Field@Width=\dimen133
+\Fld@charsize=\dimen134
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count103
+\c@Item=\count104
+\c@Hfootnote=\count105
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count106
+\c@bookmark@seq@number=\count107
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+)
+\Hy@SectionHShift=\skip49
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/commath/commath.sty (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen135
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count108
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count109
+\leftroot@=\count110
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count111
+\DOTSCASE@=\count112
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
+\dotsspace@=\muskip11
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
+\tag@help=\toks23
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
+\andhelp@=\toks24
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks25
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks27
+\thm@bodyfont=\toks28
+\thm@headfont=\toks29
+\thm@notefont=\toks30
+\thm@headpunct=\toks31
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks32
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count120
+\float@exts=\toks33
+\float@box=\box31
+\@float@everytoks=\toks34
+\@floatcapt=\box32
+)
+\c@thethm=\count121
+\c@lemma=\count122
+\c@note=\count123
+\c@defn=\count124
+\c@exmp=\count125
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+ (/Users/asharov/projects/personal/latex/masters/course_work_1/.texpadtmp/main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 483.69687pt, 42.67912pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-15.36449pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=14.0pt
+* \footskip=28.45274pt
+* \marginparwidth=24.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box33
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count126
+\scratchdimen=\dimen144
+\scratchbox=\box34
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen145
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks36
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package hyperref Info: Link coloring ON on input line 40.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+ (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count132
+)
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
+ (/Users/asharov/projects/personal/latex/masters/course_work_1/.texpadtmp/main.out) (/Users/asharov/projects/personal/latex/masters/course_work_1/.texpadtmp/main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+ (/Users/asharov/projects/personal/latex/masters/course_work_1/.texpadtmp/main.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 47.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 47.
+ [1
+
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 47.
+
+Overfull \hbox (2.99765pt too wide) in paragraph at lines 60--61
+[]\T2A/cmr/m/n/14.4 Размерностью пол-но-го мет-ри-че-ско-го про-стран-ства $\OML/cmm/m/it/14.4 X$ \T2A/cmr/m/n/14.4 на-зы-ва-ет-ся наи-
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 65.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 65.
+[2
+
+]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 68.
+ [3]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 77.
+ [4
+
+]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 79.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 79.
+
+Underfull \hbox (badness 1622) in paragraph at lines 82--83
+[][]\T2A/cmr/bx/n/14.4 Определение 1. []\T2A/cmr/m/n/14.4 Пусть $\OML/cmm/m/it/14.4 M$ \T2A/cmr/m/n/14.4 - неко-то-рое непу-стое мно-же-ство, и пусть
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 120.
+[5
+
+]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 136.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 136.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 171.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 171.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 171.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 171.
+ [6]
+Overfull \hbox (5.74214pt too wide) in paragraph at lines 174--175
+[][]\T2A/cmr/bx/n/14.4 Определение 8. []\T2A/cmr/m/n/14.4 По-ле $\U/msb/m/n/14.4 Q[]$ \T2A/cmr/m/n/14.4 на-зы-ва-ет-ся муль-ти-пли-ка-тив-ной груп-пой по-ля $\U/msb/m/n/14.4 Q[]$\T2A/cmr/m/n/14.4 [[]]; 
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 183.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 183.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 205.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 205.
+[7]
+Overfull \hbox (4.66309pt too wide) in paragraph at lines 253--254
+[][]\T2A/cmr/bx/n/14.4 Замечание 8. []\T2A/cmr/m/it/14.4 В про-стран-стве $\U/msb/m/n/14.4 Q[]$ \T2A/cmr/m/it/14.4 спра-вед-ли-ва лем-ма Гейне-Бореля: из каж-
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 258.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 258.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 258.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 258.
+[8]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 260.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 260.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 260.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 260.
+ [9]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 260.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 260.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 260.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 260.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 260.
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 262--263
+[]\T2A/cmr/m/n/14.4 Так как ком-пакт $\U/msb/m/n/14.4 Z[]$ \T2A/cmr/m/n/14.4 есть по-пол-не-ние мно-же-ства $\U/msb/m/n/14.4 N[]$ \T2A/cmr/m/n/14.4 по мет-ри-ке
+ []
+
+
+Overfull \hbox (9.80222pt too wide) in paragraph at lines 269--270
+[][]\T2A/cmr/bx/n/14.4 Определение 13. []$\OML/cmm/m/it/14.4 p$\T2A/cmr/m/n/14.4 -адическое це-лое $\OML/cmm/m/it/14.4 z$ \T2A/cmr/m/n/14.4 есть пре-дел по-сле-до-ва-тель-но-сти $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 z[]\OMS/cmsy/m/n/14.4 g[]$\T2A/cmr/m/n/14.4 ,
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 285.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 285.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 285.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 285.
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 302.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 302.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 302.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 302.
+[10
+
+]
+Overfull \hbox (3.73575pt too wide) in paragraph at lines 316--317
+\T2A/cmr/m/it/14.4 вы-чис-ле-ния про-из-вод-ных сум-мы, част-но-го и слож-ной функ-ции в $\OML/cmm/m/it/14.4 p$\T2A/cmr/m/it/14.4 -адическом
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 323.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 323.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 323.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 323.
+[11]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 323.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 323.
+
+Overfull \hbox (4.38167pt too wide) in paragraph at lines 325--326
+[]\T2A/cmr/m/n/14.4 В дан-ном раз-де-ле мы бу-дем за-ни-мать-ся по-стро-е-ни-ем ав-то-ма-та для функ-
+ []
+
+<img/automata_1.png, id=242, 749.80125pt x 356.33125pt>
+File: img/automata_1.png Graphic file (type png)
+<use img/automata_1.png>
+Package pdftex.def Info: img/automata_1.png  used on input line 331.
+(pdftex.def)             Requested size: 241.84843pt x 114.9309pt.
+<img/automata_2.png, id=244, 1170.3725pt x 492.84125pt>
+File: img/automata_2.png Graphic file (type png)
+<use img/automata_2.png>
+Package pdftex.def Info: img/automata_2.png  used on input line 337.
+(pdftex.def)             Requested size: 241.84843pt x 101.83775pt.
+
+Overfull \hbox (19.20308pt too wide) in paragraph at lines 345--346
+[]\T2A/cmr/m/n/14.4 Автомат $\OT1/cmr/m/n/14.4 ^^F[]$ \T2A/cmr/m/n/14.4 ре-а-ли-зу-ет ограниченно-детерминированную функ-цию $\OT1/cmr/m/n/14.4 ^^F[](\OML/cmm/m/it/14.4 x; y\OT1/cmr/m/n/14.4 )$\T2A/cmr/m/n/14.4 ,
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 346.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 346.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 346.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 346.
+[12
+
+ <./img/automata_1.png> <./img/automata_2.png>]
+<img/automata_3.png, id=262, 443.6575pt x 317.185pt>
+File: img/automata_3.png Graphic file (type png)
+<use img/automata_3.png>
+Package pdftex.def Info: img/automata_3.png  used on input line 358.
+(pdftex.def)             Requested size: 241.84843pt x 172.90352pt.
+<img/automata_4.png, id=263, 486.81876pt x 279.0425pt>
+File: img/automata_4.png Graphic file (type png)
+<use img/automata_4.png>
+Package pdftex.def Info: img/automata_4.png  used on input line 364.
+(pdftex.def)             Requested size: 241.84843pt x 138.62675pt.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 368.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 368.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 368.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 368.
+ [13 <./img/automata_3.png>]
+<img/automata_5.png, id=278, 477.785pt x 270.00874pt>
+File: img/automata_5.png Graphic file (type png)
+<use img/automata_5.png>
+Package pdftex.def Info: img/automata_5.png  used on input line 376.
+(pdftex.def)             Requested size: 241.84843pt x 136.67262pt.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 380.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 380.
+ [14 <./img/automata_4.png>]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 383.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 383.
+
+Overfull \hbox (15.1651pt too wide) in paragraph at lines 384--385
+[]\T2A/cmr/m/n/14.4 Зафиксируем про-стое чис-ло $\OML/cmm/m/it/14.4 p$\T2A/cmr/m/n/14.4 . Со-по-ста-вим каж-до-му сло-ву $\OML/cmm/m/it/14.4  \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 a\OT1/cmr/m/n/14.4 (1) [] \OML/cmm/m/it/14.4 a\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 l\OT1/cmr/m/n/14.4 )$
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 400.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 400.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 400.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 400.
+[15 <./img/automata_5.png>]
+LaTeX Font Info:    Try loading font information for U+euf on input line 420.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+<img/automata_6.png, id=306, 628.3475pt x 194.7275pt>
+File: img/automata_6.png Graphic file (type png)
+<use img/automata_6.png>
+Package pdftex.def Info: img/automata_6.png  used on input line 423.
+(pdftex.def)             Requested size: 241.84843pt x 74.94801pt.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 427.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 427.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 427.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 427.
+ [16]
+<img/automata_7.png, id=320, 620.3175pt x 193.72375pt>
+File: img/automata_7.png Graphic file (type png)
+<use img/automata_7.png>
+Package pdftex.def Info: img/automata_7.png  used on input line 429.
+(pdftex.def)             Requested size: 241.84843pt x 75.5283pt.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 435.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 435.
+
+Overfull \hbox (4.1541pt too wide) in paragraph at lines 448--450
+\T2A/cmr/m/n/14.4 Другими сло-ва-ми, каж-дой де-тер-ми-ни-ро-ван-ной функ-ции $\OML/cmm/m/it/14.4 f$ \T2A/cmr/m/n/14.4 со-от-вет-ству-ет един-
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 454.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 454.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 454.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 454.
+[17 <./img/automata_6.png> <./img/automata_7.png>]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 462.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 462.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 462.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 462.
+ [18]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 465.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 465.
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 493.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 493.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 493.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 493.
+[19]
+
+LaTeX Warning: Command \textless invalid in math mode on input line 503.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 506.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 509.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 509.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 509.
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 525.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 525.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 525.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 525.
+[20]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 536.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 536.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 536.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 536.
+ [21]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 536.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 536.
+ (/Users/asharov/projects/personal/latex/masters/course_work_1/.texpadtmp/main.bbl
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 1.
+ [22
+
+]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 1.
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 35.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+Underfull \hbox (badness 1221) in paragraph at lines 86--92
+[]\T2A/cmr/m/n/14.4 Лунц, А.Г. p-адический ап-па-рат в тео-рии ко-неч-ных ав-то-ма-тов  /
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 118--124
+[]\T2A/cmr/m/n/14.4 Tyapaev, L. B. Non-Archimedean dynamics of the complex shift  /
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 124.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 124.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 124.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 124.
+[23
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 543.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 543.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 543.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 543.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 543.
+ [24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 543.
+ (/Users/asharov/projects/personal/latex/masters/course_work_1/.texpadtmp/main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 543.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 543.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 543.
+ ) 
+Here is how much of TeX's memory you used:
+ 13869 strings out of 492649
+ 197308 string characters out of 6129621
+ 292258 words of memory out of 5000000
+ 17406 multiletter control sequences out of 15000+600000
+ 15910 words of font info for 54 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 43i,15n,40p,2139b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on /Users/asharov/projects/personal/latex/masters/course_work_1/.texpadtmp/main.pdf (24 pages, 547302 bytes).
+PDF statistics:
+ 480 PDF objects out of 1000 (max. 8388607)
+ 415 compressed objects within 5 object streams
+ 147 named destinations out of 1000 (max. 500000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+

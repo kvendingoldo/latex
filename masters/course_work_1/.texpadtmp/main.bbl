@@ -1,0 +1,141 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+
+\bibitem{bib:automata:elements}
+\selectlanguageifdefined{russian}
+\BibEmph{В.Б.,~Кудрявцев}. Элементы теории
+  автоматов ~/ {}
+\newblock [Кудрявцев~В.Б., Алешин~С.В.,
+  Подколзин~А.С.]~: М.: Изд-во МГУ, 1978.{}
+\newblock 2016~{с.}
+
+\bibitem{bib:kozirev:2008}
+\selectlanguageifdefined{russian}
+\BibEmph{Козырев,~С.~В.} Методы и приложения
+  ультраметрического и p-адического
+  анализа: от теории всплесков до биофизики
+  ~/ С.~В.~Козырев~// \BibEmph{Совр. пробл. матем.}{}
+\newblock 2008.{}
+\newblock Т.~12.{}
+\newblock {С.}~3–168.
+
+\bibitem{bib:crypto:anashin}
+\selectlanguageifdefined{russian}
+\BibEmph{Анашин,~В.С}. Методы неархимедовой
+  алгебраической динамики в криптографии
+  [Электронный ресурс].{}
+\newblock URL:
+  \BibUrl{https://istina.msu.ru/media/courses/course/f66/226/7102110/SYMB_COMPUT.PDF}
+  ({дата обращения}: 03.04.2019).
+
+\bibitem{bib:analysis:volovich}
+\selectlanguageifdefined{russian}
+\BibEmph{И.В.,~Волович}. p–Адическая
+  математическая физика: основные
+  конструкции, применения к сложным и
+  наноскопическим системам ~/ {}
+\newblock [Волович~И.В., Козырев~С.В.]~: Самара,
+  2009.{}
+\newblock 30~{с.}
+
+\bibitem{bib:analysis:baker}
+\selectlanguageifdefined{english}
+\BibEmph{Baker,~A.} An Introduction to p-adic Numbers and p-adic Analysis ~/ {}
+\newblock [A.~Baker]~: University of Glasgow, 2017.{}
+\newblock 64~p.
+
+\bibitem{bib:analysis:vladimirov}
+\selectlanguageifdefined{russian}
+\BibEmph{Владимиров,~В.C.} p-Адический анализ и
+  математическая физика ~/ {}
+\newblock [В.C.~Владимиров, Волович~И.В.,
+  Зеленов~Е.И.]~: М.:Физматлит, 1994.{}
+\newblock 352~{с.}
+
+\bibitem{bib:analysis:anashin}
+\selectlanguageifdefined{russian}
+\BibEmph{Анашин,~В.С.} Введение в прикладной
+  p-адический анализ .
+
+\bibitem{bib:analysis:ciocan}
+\selectlanguageifdefined{english}
+\BibEmph{Ciocan,~N.} P-adic Functions - Part 1 .{}
+\newblock 2011.
+
+\bibitem{bib:analysis:anashin:en}
+\selectlanguageifdefined{english}
+\BibEmph{Anashin,~V.} The p-adic ergodic theory and applications ~/ {}
+\newblock [V.~Anashin]~: Moscow, 2014.{}
+\newblock 221~p.
+
+\bibitem{bib:automata:phd}
+\selectlanguageifdefined{english}
+\BibEmph{Balodis,~Kaspars}. Unconventional Finite Automata and Algorithms ~:
+  Ph.\,D. thesis~/ Kaspars~Balodis~; {}
+\newblock [University of Latvia]~: Riga, 2016.
+
+\bibitem{bib:automata:lunz}
+\selectlanguageifdefined{russian}
+\BibEmph{Лунц,~А.Г.} p-адический аппарат в теории
+  конечных автоматов ~/ А.Г.~Лунц~//
+  \BibEmph{Пробл. кибернетики}.{}
+\newblock 1965.{}
+\newblock Т.~14.{}
+\newblock {С.}~17--30.
+
+\bibitem{bib:dynamics:anashin}
+\selectlanguageifdefined{english}
+\BibEmph{V.,~Anashin}. Automata finiteness criterion in terms of van der Put
+  series of automata functions ~/ Anashin~V.~// \BibEmph{p-Adic Numbers,
+  Ultrametric Analysis and Applications}.{}
+\newblock 2012.{}
+\newblock Vol. 4:2.{}
+\newblock P.~151--160.
+
+\bibitem{bib:analisys:anashin}
+\selectlanguageifdefined{english}
+\BibEmph{V.,~Anashin}. Applied Algebraic Dynamics ~/ Anashin~V.,
+  Khrennikov~A.{}
+\newblock Berlin~: W. de Gruyter, 2009.{}
+\newblock 533~p.
+
+\bibitem{bib:automata:tyapaev:2017}
+\selectlanguageifdefined{english}
+\BibEmph{Tyapaev,~L.~B.} Automata as $p$-adic Dynamical Systems
+  [Электронный ресурс].{}
+\newblock 2017.{}
+\newblock arXiv:1709.02644.
+
+\bibitem{bib:automata:tyapaev:2018}
+\selectlanguageifdefined{english}
+\BibEmph{Tyapaev,~L.~B.} Non-Archimedean dynamics of the complex shift ~/
+  L.~B.~Tyapaev~// {}
+\newblock [Компьютерные науки и информационные
+  технологии]~: Издательский центр «Наука»,
+  2018.{}
+\newblock P.~406--412.
+
+\bibitem{bib:automata:klapper}
+\selectlanguageifdefined{english}
+\BibEmph{Klapper,~A.} Feedback shift registers, 2-adic Span, and combiners with
+  memory ~/ A.~Klapper~// \BibEmph{Journal of Cryptology}.{}
+\newblock 1997.{}
+\newblock Vol. 10(2).{}
+\newblock P.~111--147.
+
+\bibitem{bib:automata:aleshin}
+\selectlanguageifdefined{russian}
+\BibEmph{В.Б.,~Кудрявцев}. Введение в теорию
+  автоматов ~/ {}
+\newblock [Кудрявцев~В.Б., Алешин~С.В.,
+  Подколзин~А.С.]~: М.: Наука, 1985.{}
+\newblock 320~{с.}
+
+\end{thebibliography}

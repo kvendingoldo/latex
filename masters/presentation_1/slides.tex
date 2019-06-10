@@ -1,0 +1,187 @@
+\documentclass[10pt,utf8,presentation,compress]{beamer}
+
+\usepackage{sty/beamer}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{graphicx}
+
+%%% Работа с русским языком и шрифтами
+
+%\usepackage{fontspec}
+%\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+%\setmainfont[Ligatures={TeX,Historic}]{Myriad Pro}
+%\setsansfont{Myriad Pro}  %  установите шрифты Myriad Pro или (при невозможности) замените здесь на другой шрифт, который есть в системе — например, Arial
+
+%\setmonofont{Courier New}
+\uselanguage{russian}
+\languagepath{russian}
+
+\usepackage{multicol} 		% Несколько колонок
+
+
+\setbeamerfont{author}{size=\fontsize{11pt}{12pt}}
+\setbeamerfont{institute}{size=\fontsize{10pt}{11pt}}
+
+% информация для титульника и для подписей слайдов
+\title[отчет по НИР]{ОТЧЕТ О НАУЧНО-ИССЛЕДОВАТЕЛЬСКОЙ РАБОТЕ}
+\author[Шаров Александр Вадимович]{Шаров Александр Вадимович}
+\institute[<<информатика и вычислительная техника>>]{<<информатика и вычислительная техника>>}
+\date{11 Июня 2019 г.}
+
+\begin{document}
+
+\frame[plain]{\titlepage}
+
+
+
+\begin{frame}
+\frametitle{Открытая проблема\label{problem:general}}
+
+Существует ли полином $g$ над $\mathbb Z_2$ такой что композиция 
+
+\begin{equation} \label{problem:1}
+f(x)=g\bigg(\frac{x(x+1)}{2}\bigg)	
+\end{equation}
+
+\noindent транзитивна по $\pmod {2^{k}}$ для всех $k$.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Гипотеза Коллатца}
+Берём любое натуральное число $n \in \mathbb N$. Если оно чётное, то делим его на $2$, а если нечётное, то умножаем на $3$ и прибавляем $1$ (получаем $3n + 1$). Над полученным числом выполняем те же самые действия, и так далее. Гипотеза заключается в том, что какое бы начальное число $n$ мы ни взяли, рано или поздно мы получим единицу.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Гипотеза Коллатца}
+Для постановки задачи в терминах $p$-адического анализа переформулируем гипотезу в виде следующей формулы:
+
+
+\begin{equation} \label{problem:2}
+\Phi_3(x)= \begin{cases}
+   3x+1, x \equiv 1 \pmod 2
+   \\
+   \frac{x}{2}, x \equiv 0 \pmod 2
+ \end{cases} \Leftrightarrow
+\begin{cases}
+   \frac{3x+1}{2}, x \equiv 1
+   \\
+   \frac{x}{2}, x \equiv 0
+    \end{cases}
+\end{equation}
+ 
+\noindent Далее можно рассматривать вопрос о том, сохраняет ли функция $T_3$ меру Хаара и, если дополнительно ввести следующие функции:
+
+$$ F: x \longmapsto \bigg[\frac{x}{2}\bigg], F: \mathbb N \rightarrow \mathbb N $$
+$$ G: x=x_0+x_1p+x_2p^2+\ldots, x \longmapsto \frac{x-x_0}{p}$$
+
+\noindent то можно рассматривать задачу об их биективности, совместимости и $1$-липшицевости.
+\end{frame}
+
+\begin{frame}
+\frametitle{Построение автомата для функции вида $f(x)=cx$}
+
+Для любого рационального числа $c=\frac{n}{m}$, где $n,m \in \mathbb Z$ и где $p$ не является делителем $m$, существует ограниченно-детерминированная функция $f: \mathbb Z_p \rightarrow \mathbb Z_p$ такая, что $f(x)=cx$. Обозначим через $\mathfrak{A}_c$ соотвествующий приведенный конечный автомат. Легко видеть, что для любой детерминированной функции $f: \mathbb Z_p \rightarrow \mathbb Z_p$ и слова $\alpha=a(1)a(2)\ldots a(l) \in E^l_p$ для соответствующей остаточной функции $f_\alpha (x)$ выполняется следующее соотношение:
+
+\begin{equation} \label{automata:2}
+f([\alpha]+p^lx)=[\beta]+p^l f_{\alpha}(x)
+\end{equation}
+
+\noindent где $\beta=b(1)b(2)\ldots b(l) =f(\alpha) \in E^l_p$:
+
+\begin{equation} \label{automata:3}
+\overbrace{\underbrace{a(1)\ldots a(l)}_{\alpha} \underbrace{x(1)x(2)\ldots}_{x}}^{[\alpha]+p^{l}x} \rightarrow
+\boxed{f} \rightarrow \overbrace{\underbrace{b(1)\ldots b(l)}_{\beta} \underbrace{x(1)x(2)\ldots}_{x}}^{[\beta]+p^{l}f_{\alpha}(x)}
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Построение автомата для функции вида $f(x)=cx$}
+\noindent Из соотношения \ref{automata:2} непосредственно следует формула для $f_{\alpha}(x)$:
+
+\begin{equation} \label{automata:4}
+f_{\alpha}(x)=\frac{f([\alpha]+p^{l}x)-[\beta]}{p^l}.
+\end{equation}
+
+\noindent Для начала опишем автомат $\mathfrak{A}_n$, где $n \in \mathbb N$. Применив формулу \ref{automata:4} к функции $f(x)=nx$, получим:
+
+\begin{equation} \label{automata:5}
+(nx)_{\alpha}=\frac{n([\alpha]+p^{l}x)-[\beta]}{p^l}	=nx+\frac{n[\alpha]-[\beta]}{p^l},
+\end{equation}
+
+\noindent где $[\beta]=n[\alpha] \pmod {p^l}$ (так как $f(\alpha)=\beta$). Следовательно, $n[\alpha]-[\beta]$ делится на $p^l$, и мы получаем более короткое представление:
+
+\begin{equation} \label{automata:6}
+(nx)_{\alpha}=nx+q,	
+\end{equation}
+
+\noindent где $q=\bigg[\frac{n[\alpha]}{p^l}\bigg] \in \{0, \ldots, n-1\}$, так как $n[\alpha]=p^l q+[\beta]$ и $[\alpha],[\beta] \in [0,p^l)$. Покажем, что $\forall q \in \{0, \ldots, n-1\} \quad \exists \alpha: \alpha \in E^l_p$, что  $q=\frac{n[\alpha]}{p^l}$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Построение автомата для функции вида $f(x)=cx$}
+\noindent Действительно, последнее эквивалентно следующему выражению:
+
+\begin{equation} \label{automata:7}
+p^l q \leq n[\alpha] \textless p^l q+ p^l.	
+\end{equation}
+
+\noindent Возьмем теперь достаточно больше $l$ так, чтобы выполнялось неравенство $p^l \textgreater n$, и положим $\alpha \in E^l_p$ равным $p$-ичной зависи числа $\bigg[\frac{p^l q}{n}\bigg]$, т.e. $[\alpha]=\bigg[\frac{p^l q}{n}\bigg]$. Тогда:
+
+\begin{equation} \label{automata:8}
+\frac{p^l q}{n} \leq [\alpha] \textless \frac{p^l q}{n} + 1 \Rightarrow p^l q \leq n[\alpha] \textless p^l q +n \Rightarrow p^l q \leq n[\alpha] \textless p^l q + p^l.
+\end{equation}
+
+\noindent Следовательно, слово $\alpha$ удовлетворяет условию (4) и $q=\bigg[\frac{n[\alpha]}{p^l}\bigg]$. Таким образом, показано что остаточные функции для $f(x)=nx$ полностью исчерпываются функциями $f^{(q)}(x)=nx+q$, где $q \in \{0, \ldots, n-1 \}$. Более того, все эти функции различны, поскольку $f^{(q)}(0) \neq f^{(q^{'})}(0)$ при $q \neq q^{'}$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Построение автомата для функции вида $f(x)=cx$}
+Такое наблюдение позволяет выбрать в качестве множества состояний приведенного автомата $\mathfrak{A}_n$, реализующего ограниченно-детерминированная функцию $nx$, множество $Q=\{0, \ldots, n-1 \}$. Опишем функцию переходов и функцию выходов автомата $\mathfrak{A}_n$. Применив формулу \ref{automata:4} к функции $f^{(q)}(x)=nx+q$ и однобуквенному слову $\alpha=a$, получим:
+
+
+ \begin{equation} \label{automata:9}
+ (nx+q)_{\alpha}=\frac{n(px+a)+q-b}{p}=nx+\frac{q+na-b}{p}	
+ \end{equation}
+
+\noindent где $b=na+q \pmod p$. Тогда $(nx+q)_\alpha = nx + q^{'}$, где $q^{'}=\frac{q+na-b}{p}$, и в автомате $\mathfrak{A}_n$ переход $q \xrightarrow{a/b} q^{'}$ существует тогда и только тогда, когда выполнено равенство:
+ 
+ \begin{equation} \label{automata:10}
+ 	q+na=pq^{'}+b
+ \end{equation}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Участие в научной конференции <<Presenting Academic Achievements to the World>>}
+Было подготовлено и реализовано выступление на английском языке для конференции <<Presenting Academic Achievements to the World>>.
+
+
+Тема: <<How to reduce the AWS costs by using Kubernetes>>
+\end{frame}
+
+\begin{frame}[c]
+\begin{center}
+\frametitle{\LARGE Спасибо за внимание!}
+
+{\LARGE \inserttitle}
+
+\bigskip\bigskip
+
+{\large \insertauthor} 
+
+\bigskip\bigskip
+
+{\insertinstitute}
+
+\bigskip\bigskip
+
+{\large \insertdate}
+\end{center}
+\end{frame}
+
+\end{document}
