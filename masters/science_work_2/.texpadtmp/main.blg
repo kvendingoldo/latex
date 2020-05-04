@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: /Users/asharov/projects/personal/latex/masters/science_work_2/.texpadtmp/main.aux
+The style file: ../biblio/ugost.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: ../biblio/biblio.bib
+You can't pop an empty literal stack for entry bib:block:1
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:block:4
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:block:2
+while executing---line 1930 of file ../biblio/ugost.bst
+You can't pop an empty literal stack for entry bib:block:3
+while executing---line 1930 of file ../biblio/ugost.bst
+Warning--empty year in bib:block:5
+You've used 5 entries,
+            3890 wiz_defined-function locations,
+            1115 strings with 9736 characters,
+and the built_in function-call counts, 1493 in all, are:
+= -- 187
+> -- 25
+< -- 4
++ -- 11
+- -- 6
+* -- 97
+:= -- 140
+add.period$ -- 18
+call.type$ -- 5
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 95
+empty$ -- 205
+format.name$ -- 10
+if$ -- 411
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 0
+newline$ -- 40
+num.names$ -- 8
+pop$ -- 48
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 32
+stack$ -- 0
+substring$ -- 0
+swap$ -- 50
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 1
+while$ -- 4
+width$ -- 6
+write$ -- 74
+(There were 4 error messages)

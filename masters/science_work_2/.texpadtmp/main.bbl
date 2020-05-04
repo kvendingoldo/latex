@@ -1,0 +1,53 @@
+\begin{thebibliography}{1}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+
+\bibitem{bib:block:1}
+\selectlanguageifdefined{russian}
+\BibEmph{Поппер,~Н.} Цифровое золото.
+  Невероятная история биткойна, или О том,
+  как идеалисты и бизнесмены изобретают
+  деньги заново ~/ {}
+\newblock [Н.~Поппер]~: Вильямс, 2016.{}
+\newblock 386~{с.}
+
+\bibitem{bib:block:4}
+\selectlanguageifdefined{russian}
+\BibEmph{Тапскотт,~Д.} Блокчейн-революция. Как
+  технология, стоящая за биткойном, меняет
+  деньги, бизнес и мир ~/ {}
+\newblock [Д.~Тапскотт, Тапскотт~А.]~: Эксмо, 2017.{}
+\newblock 448~{с.}
+
+\bibitem{bib:block:2}
+\selectlanguageifdefined{russian}
+\BibEmph{Ривал,~С.} Децентрализованные
+  приложения. Технология Blockchain в действии ~/
+  {}
+\newblock [С.~Ривал]~: Питер, 2017.{}
+\newblock 192~{с.}
+
+\bibitem{bib:block:3}
+\selectlanguageifdefined{russian}
+\BibEmph{Генкин,~А.} Блокчейн. Как это работает и
+  что ждет нас завтра ~/ {}
+\newblock [А.~Генкин, Михеев~А.]~: Альпина
+  Паблишер, 2018.{}
+\newblock 592~{с.}
+
+\bibitem{bib:block:5}
+\selectlanguageifdefined{russian}
+Анализ применения технологии блокчейн в
+  целях обеспечения безопасности
+  банковских операций [Электронный
+  ресурс].{}
+\newblock URL: \BibUrl{https://otherreferats.allbest.ru} ({дата
+  обращения}: 08.11.2019).
+
+\end{thebibliography}
